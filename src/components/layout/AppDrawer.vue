@@ -33,7 +33,6 @@ nextTick(() => {
 
 <template>
   <v-navigation-drawer
-    id="app-navigation-drawer"
     v-model="drawer"
     :expand-on-hover="rail"
     :src="drawerImageShow ? drawerImage : ''"
@@ -46,7 +45,7 @@ nextTick(() => {
       <v-img v-show="drawerImageShow" :gradient="gradient" v-bind="props" />
     </template>
     <template #prepend>
-      <v-list dense nav>
+      <v-list dense nav class="drawer-header">
         <v-list-item prepend-avatar="/favicon.svg" class="pa-1">
           <v-list-item-title>
             Vitify <span class="primary--text">Admin</span>
@@ -73,13 +72,10 @@ nextTick(() => {
     </v-list> -->
     <v-spacer />
     <template #append>
-      <v-list-item
-        id="drawer-footer"
-        class="px-0 d-flex flex-column justify-center"
-      >
+      <v-list-item class="drawer-footer px-0 d-flex flex-column justify-center">
         <div />
         <div class="text-body-2 font-weight-light pt-6 pt-md-0 text-center">
-          &copy; Copyright 2022
+          &copy; Copyright 2023
           <a
             href="https://github.com/kingyue737"
             class="font-weight-regular"
@@ -100,7 +96,7 @@ nextTick(() => {
 </template>
 
 <style lang="scss">
-#app-navigation-drawer {
+.v-navigation-drawer {
   transition-property: transform, visibility, width, box-shadow;
   .v-list-item--active:hover::before,
   .v-list-item--active::before {
@@ -187,7 +183,7 @@ nextTick(() => {
       font-weight: bold;
     }
   }
-  #drawer-footer {
+  .drawer-footer {
     min-height: 30px;
     div {
       white-space: nowrap;
