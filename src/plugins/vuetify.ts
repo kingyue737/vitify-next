@@ -2,10 +2,10 @@ import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 import { en, zhHans } from 'vuetify/locale'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
-import { mdiAccount } from '@mdi/js'
+import { mdiAccount, mdiHome } from '@mdi/js'
 import { mapKeys, kebabCase } from 'lodash'
 
-const mdIcons = { mdiAccount }
+const mdIcons = { mdiAccount, mdiHome }
 const mdIconAlias = mapKeys(mdIcons, (v, k) => kebabCase(k))
 
 const theme = {

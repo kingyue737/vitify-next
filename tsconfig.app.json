@@ -4,6 +4,8 @@
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "composite": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "types": ["vite-plugin-vue-layouts/client"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]

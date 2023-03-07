@@ -1,13 +1,12 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { createApp, type Plugin } from 'vue'
 
 import App from './App.vue'
-import router from './router'
-import vuetify from './plugins/vuetify'
+import '@/assets/styles/index.scss'
 
 const app = createApp(App)
 
-app.use(createPinia())
-app.use(router).use(vuetify)
+Object.values(
+  import.meta.glob<Plugin>('./plugins/*.ts', { eager: true, import: 'default' })
+).forEach((v) => app.use(v))
 
 app.mount('#app')
