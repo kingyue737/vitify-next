@@ -6,11 +6,6 @@
   </v-main>
 </template>
 
-<script setup lang="ts">
-import AppBar from '../components/layout/AppBar.vue'
-import AppDrawer from '../components/layout/AppDrawer.vue'
-</script>
-
 <style scoped lang="scss">
 .v-main {
   padding-top: 0;
