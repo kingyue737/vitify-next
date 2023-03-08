@@ -16,7 +16,7 @@ export default defineConfig({
     Vue({ template: { transformAssetUrls } }),
     Layouts(),
     Vuetify({ autoImport: true }),
-    Components(),
+    Components({ dts: './src/components.d.ts', types: [] }),
     AutoImport({
       imports: [
         'vue',
