@@ -20,7 +20,7 @@ const drawer = computed({
 const rail = computed(() => !drawerStored.value && !mobile.value)
 const gradient = computed(() =>
   useTheme().current.value.dark
-    ? 'to bottom, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)'
+    ? 'to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .7)'
     : 'to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, .7)'
 )
 
@@ -112,7 +112,7 @@ nextTick(() => {
     overflow-y: overlay;
   }
   .drawer-footer {
-    transition: all 0.3s;
+    transition: all 0.2s;
     min-height: 30px;
     div {
       white-space: nowrap;

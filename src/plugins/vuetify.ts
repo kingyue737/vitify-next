@@ -2,10 +2,23 @@ import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 import { en, zhHans } from 'vuetify/locale'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
-import { mdiAccount, mdiHome } from '@mdi/js'
+import {
+  mdiAccount,
+  mdiHome,
+  mdiPaletteOutline,
+  mdiWeatherSunny,
+  mdiWeatherNight,
+} from '@mdi/js'
 import { mapKeys, kebabCase } from 'lodash'
+import { useDark } from '@vueuse/core'
 
-const mdIcons = { mdiAccount, mdiHome }
+const mdIcons = {
+  mdiAccount,
+  mdiHome,
+  mdiPaletteOutline,
+  mdiWeatherSunny,
+  mdiWeatherNight,
+}
 const mdIconAlias = mapKeys(mdIcons, (v, k) => kebabCase(k))
 
 const theme = {
@@ -21,7 +34,13 @@ export default createVuetify({
     fallback: 'en',
     messages: { zhHans, en },
   },
+  defaults: {
+    VSwitch: {
+      color: 'primary',
+    },
+  },
   theme: {
+    defaultTheme: useDark().value ? 'dark' : 'light',
     themes: {
       light: {
         colors: theme,
@@ -38,5 +57,8 @@ export default createVuetify({
       ...mdIconAlias,
     },
     sets: { mdi },
+  },
+  display: {
+    mobileBreakpoint: 'sm',
   },
 })

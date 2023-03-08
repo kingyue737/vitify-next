@@ -11,5 +11,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AppBar: typeof import('./components/layout/AppBar.vue')['default']
     AppDrawer: typeof import('./components/layout/AppDrawer.vue')['default']
+    AppFooter: typeof import('./components/layout/AppFooter.vue')['default']
+    ButtonSettings: typeof import('./components/layout/ButtonSettings.vue')['default']
   }
 }

@@ -4,7 +4,7 @@ const route = useRoute()
 </script>
 
 <template>
-  <v-app-bar color="#fdfdfd" flat border style="border-width: 0 0 1px 0">
+  <v-app-bar flat border style="border-width: 0 0 1px 0">
     <v-app-bar-nav-icon @click="drawer = !drawer" />
     <v-app-bar-title>{{ route.meta.title }}</v-app-bar-title>
     <v-spacer />
