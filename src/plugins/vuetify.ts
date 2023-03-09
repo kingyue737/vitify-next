@@ -8,6 +8,11 @@ import {
   mdiPaletteOutline,
   mdiWeatherSunny,
   mdiWeatherNight,
+  mdiBellRemove,
+  mdiBellBadgeOutline,
+  mdiBellOutline,
+  mdiCloseCircle,
+  mdiAlertCircle,
 } from '@mdi/js'
 import { mapKeys, kebabCase } from 'lodash'
 import { useDark } from '@vueuse/core'
@@ -18,8 +23,14 @@ const mdIcons = {
   mdiPaletteOutline,
   mdiWeatherSunny,
   mdiWeatherNight,
+  mdiBellRemove,
+  mdiBellBadgeOutline,
+  mdiBellOutline,
 }
 const mdIconAlias = mapKeys(mdIcons, (v, k) => kebabCase(k))
+// fix vuetify#16870(https://github.com/vuetifyjs/vuetify/issues/16870)
+mdIconAlias['warning'] = mdiAlertCircle
+mdIconAlias['error'] = mdiCloseCircle
 
 const theme = {
   primary: '#0096C7',

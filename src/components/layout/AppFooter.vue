@@ -1,6 +1,7 @@
 <template>
   <v-footer app border>
     <v-spacer />
+    <AppNotification />
     <ButtonSettings />
   </v-footer>
 </template>

@@ -5,6 +5,7 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
+  const Notify: typeof import('./stores/notification')['Notify']
   const acceptHMRUpdate: typeof import('pinia')['acceptHMRUpdate']
   const computed: typeof import('vue')['computed']
   const createApp: typeof import('vue')['createApp']
@@ -70,6 +71,7 @@ declare global {
   const useDisplay: typeof import('vuetify')['useDisplay']
   const useLayout: typeof import('vuetify')['useLayout']
   const useLocale: typeof import('vuetify')['useLocale']
+  const useNotificationStore: typeof import('./stores/notification')['useNotificationStore']
   const useRoute: typeof import('vue-router/auto')['useRoute']
   const useRouter: typeof import('vue-router/auto')['useRouter']
   const useRtl: typeof import('vuetify')['useRtl']
