@@ -51,7 +51,7 @@ const svgIcons = Object.fromEntries(
 )
 const custom: IconSet = {
   component: (props: IconProps) =>
-    h(props.tag, [h(svgIcons[props.icon as string], { class: 'v-icon__svg' })]),
+    h(props.tag, [h(svgIcons[props.icon as string])]),
 }
 
 const theme = {

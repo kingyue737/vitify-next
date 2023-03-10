@@ -15,7 +15,19 @@ export default defineConfig({
   plugins: [
     VueRouter({ importMode: 'sync', dts: './src/typed-router.d.ts' }),
     Vue({ template: { transformAssetUrls } }),
-    SvgLoader(),
+    SvgLoader({
+      svgoConfig: {
+        plugins: [
+          'removeDoctype',
+          'removeMetadata',
+          'removeComments',
+          {
+            name: 'addClassesToSVGElement',
+            params: { className: 'v-icon__svg' },
+          },
+        ],
+      },
+    }),
     Layouts(),
     Vuetify({ autoImport: true }),
     Components({ dts: './src/components.d.ts', types: [] }),

@@ -23,11 +23,11 @@ const color = computed({
   },
 })
 const colors = [
-  ['#0096C7', '#ff9800'],
+  ['#1697f6', '#ff9800'],
   ['#4CAF50', '#FF5252'],
   ['#9C27b0', '#E91E63'],
   ['#304156', '#3f51b5'],
-  ['#fbd26a', '#492d22'],
+  ['#002FA7', '#492d22'],
 ]
 const images = [drawer1, drawer2, drawer3]
 const menuShow = ref(false)

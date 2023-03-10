@@ -38,7 +38,7 @@ if (isActive.value) {
     :border="variant ? 'start' : false"
     :variant="variant ? 'outlined' : 'tonal'"
     :density="variant ? 'compact' : undefined"
-    :elevation="variant ? 0 : 10"
+    :elevation="variant ? 0 : 3"
     :type="notification.type"
     :text="notification.text"
     :title="notification.time.toLocaleString()"
