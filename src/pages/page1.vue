@@ -1,8 +1,10 @@
 <template>
   <v-container>
-    <v-btn @click="test"></v-btn>
-    <v-btn @click="test2"></v-btn>
+    <v-btn color="primary" icon="$cancel" @click="test"></v-btn>
+    <v-btn color="primary" icon="custom:nustar" @click="test2"></v-btn>
     <v-btn @click="test3"></v-btn>
+    <v-icon icon="$cancel" color="primary" />
+    <v-icon icon="custom:nustar" color="primary" />
   </v-container>
 </template>
 

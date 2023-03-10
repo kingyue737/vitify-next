@@ -1,5 +1,6 @@
 import 'vuetify/styles'
-import { createVuetify } from 'vuetify'
+import type { FunctionalComponent } from 'vue'
+import { createVuetify, type IconSet, type IconProps } from 'vuetify'
 import { en, zhHans } from 'vuetify/locale'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 import {
@@ -31,6 +32,27 @@ const mdIconAlias = mapKeys(mdIcons, (v, k) => kebabCase(k))
 // fix vuetify#16870(https://github.com/vuetifyjs/vuetify/issues/16870)
 mdIconAlias['warning'] = mdiAlertCircle
 mdIconAlias['error'] = mdiCloseCircle
+
+function filename(path: string) {
+  return path
+    .split(/(\\|\/)/g)
+    .pop()!
+    .replace(/\.[^/.]+$/, '')
+}
+
+const svgIcons = Object.fromEntries(
+  Object.entries(
+    import.meta.glob<FunctionalComponent>('@/assets/icons/*.svg', {
+      eager: true,
+      import: 'default',
+      as: 'component',
+    })
+  ).map(([k, v]) => [filename(k), v])
+)
+const custom: IconSet = {
+  component: (props: IconProps) =>
+    h(props.tag, [h(svgIcons[props.icon as string], { class: 'v-icon__svg' })]),
+}
 
 const theme = {
   primary: '#0096C7',
@@ -67,7 +89,7 @@ export default createVuetify({
       ...aliases,
       ...mdIconAlias,
     },
-    sets: { mdi },
+    sets: { mdi, custom },
   },
   display: {
     mobileBreakpoint: 'sm',
