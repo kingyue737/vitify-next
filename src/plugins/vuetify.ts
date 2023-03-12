@@ -55,7 +55,7 @@ const custom: IconSet = {
 }
 
 const theme = {
-  primary: '#0096C7',
+  primary: '#1697f6',
   secondary: '#03A9F4',
   accent: '#9C27b0',
   info: '#00CAE3',

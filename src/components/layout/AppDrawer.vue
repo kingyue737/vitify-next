@@ -40,15 +40,22 @@ nextTick(() => {
       <v-img
         v-show="drawerImageShow"
         cover
-        class=""
         :gradient="gradient"
         :src="image"
         height="100%"
       />
     </template>
     <template #prepend>
-      <v-list dense nav class="drawer-header">
-        <v-list-item prepend-avatar="/favicon.svg" class="pa-1">
+      <v-list dense nav>
+        <v-list-item class="pa-1">
+          <template #prepend>
+            <v-icon
+              icon="custom:vitify"
+              size="x-large"
+              class="drawer-header-icon"
+              color="primary"
+            />
+          </template>
           <v-list-item-title class="text-h5" style="line-height: 2rem">
             Vitify <span class="text-primary">Admin</span>
           </v-list-item-title>
@@ -71,7 +78,6 @@ nextTick(() => {
     <v-spacer />
     <template #append>
       <v-list-item class="drawer-footer px-0 d-flex flex-column justify-center">
-        <div />
         <div class="text-body-2 font-weight-light pt-6 pt-md-0 text-center">
           &copy; Copyright 2023
           <a
@@ -103,8 +109,9 @@ nextTick(() => {
       .drawer-footer {
         transform: translateX(-160px);
       }
-      .v-avatar {
-        --v-avatar-height: 32px !important;
+      .drawer-header-icon {
+        height: 1em !important;
+        width: 1em !important;
       }
     }
   }
@@ -121,10 +128,12 @@ nextTick(() => {
       min-height: 0;
     }
   }
-  .drawer-header {
-    .v-avatar {
-      border-radius: 0;
-    }
+  .drawer-header-icon {
+    opacity: 1 !important;
+    height: 1.2em !important;
+    width: 1.2em !important;
+    transition: all 0.2s;
+    margin-inline-end: 24px !important;
   }
 }
 </style>

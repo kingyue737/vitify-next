@@ -74,7 +74,7 @@ const toggleDark = useToggle(isDark)
         ></v-color-picker>
         <v-divider class="my-3" />
         <v-switch
-          :input-value="isDark"
+          :model-value="isDark"
           label="黑暗模式"
           hide-details
           :append-icon="isDark ? '$mdi-weather-night' : '$mdi-weather-sunny'"
