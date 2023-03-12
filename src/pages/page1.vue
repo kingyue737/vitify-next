@@ -13,6 +13,7 @@ definePage({
   meta: {
     icon: '$mdi-home',
     title: '示例页面1',
+    drawerIndex: 0,
   },
 })
 function test() {

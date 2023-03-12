@@ -8,6 +8,7 @@ definePage({
   meta: {
     icon: '$mdi-account',
     title: '示例页面2',
+    drawerIndex: 1,
   },
 })
 </script>

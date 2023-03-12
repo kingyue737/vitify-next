@@ -14,6 +14,8 @@ import {
   mdiBellOutline,
   mdiCloseCircle,
   mdiAlertCircle,
+  mdiAnimation,
+  mdiViewList,
 } from '@mdi/js'
 import { mapKeys, kebabCase } from 'lodash'
 import { useDark } from '@vueuse/core'
@@ -27,6 +29,8 @@ const mdIcons = {
   mdiBellRemove,
   mdiBellBadgeOutline,
   mdiBellOutline,
+  mdiAnimation,
+  mdiViewList,
 }
 const mdIconAlias = mapKeys(mdIcons, (v, k) => kebabCase(k))
 // fix vuetify#16870(https://github.com/vuetifyjs/vuetify/issues/16870)

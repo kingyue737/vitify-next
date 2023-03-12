@@ -23,6 +23,7 @@ const gradient = computed(() =>
     ? 'to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .7)'
     : 'to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, .7)'
 )
+routes.sort((a, b) => (a.meta?.drawerIndex ?? 99) - (b.meta?.drawerIndex ?? 98))
 
 nextTick(() => {
   drawerStored.value = lgAndUp.value && width.value !== 1280
@@ -64,16 +65,7 @@ nextTick(() => {
       <v-divider />
     </template>
     <v-list nav density="compact">
-      <template v-for="route in routes" :key="route.name">
-        <v-list-item
-          v-if="route.meta?.icon"
-          :prepend-icon="route.meta?.icon"
-          :title="route.meta?.title"
-          :to="{ name: route.name }"
-          active-color="primary"
-        >
-        </v-list-item>
-      </template>
+      <AppDrawerItem v-for="route in routes" :key="route.name" :item="route" />
     </v-list>
     <v-spacer />
     <template #append>
@@ -113,6 +105,10 @@ nextTick(() => {
         height: 1em !important;
         width: 1em !important;
       }
+      .v-list-group {
+        --list-indent-size: 0px;
+        --prepend-width: 0px;
+      }
     }
   }
   .v-navigation-drawer__content {
@@ -134,6 +130,13 @@ nextTick(() => {
     width: 1.2em !important;
     transition: all 0.2s;
     margin-inline-end: 24px !important;
+  }
+  .v-list-group {
+    // --list-indent-size: 10px;
+    --prepend-width: 10px;
+  }
+  .v-list-item {
+    transition: all 0.2s;
   }
 }
 </style>
