@@ -18,9 +18,14 @@ export default defineConfig({
     SvgLoader({
       svgoConfig: {
         plugins: [
+          'cleanupEnableBackground',
           'removeDoctype',
           'removeMetadata',
           'removeComments',
+          'removeXMLNS',
+          'removeXMLProcInst',
+          'sortDefsChildren',
+          'convertTransform',
           {
             name: 'addClassesToSVGElement',
             params: { className: 'v-icon__svg' },
