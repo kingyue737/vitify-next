@@ -1,3 +1,13 @@
 html {
   overflow-y: auto;
 }
+
+.v-card--variant-elevated {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+}
+
+.v-theme--light {
+  .v-main {
+    background-color: #f2f5f8;
+  }
+}

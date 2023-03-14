@@ -1,7 +1,7 @@
 <script setup lang="ts">
 definePage({
   meta: {
-    title: '嵌套路由',
+    title: 'Nested Routes',
     icon: '$mdi-view-list',
     drawerIndex: 10,
     breadcrumb: 'disabled',

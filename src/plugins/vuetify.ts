@@ -16,6 +16,13 @@ import {
   mdiAlertCircle,
   mdiAnimation,
   mdiViewList,
+  mdiWeb,
+  mdiRss,
+  mdiSend,
+  mdiBell,
+  mdiGithub,
+  mdiCurrencyCny,
+  mdiMonitorDashboard,
 } from '@mdi/js'
 import { mapKeys, kebabCase } from 'lodash'
 import { useDark } from '@vueuse/core'
@@ -31,6 +38,13 @@ const mdIcons = {
   mdiBellOutline,
   mdiAnimation,
   mdiViewList,
+  mdiWeb,
+  mdiRss,
+  mdiSend,
+  mdiBell,
+  mdiGithub,
+  mdiCurrencyCny,
+  mdiMonitorDashboard,
 }
 const mdIconAlias = mapKeys(mdIcons, (v, k) => kebabCase(k))
 // fix vuetify#16870(https://github.com/vuetifyjs/vuetify/issues/16870)
