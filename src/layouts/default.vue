@@ -7,6 +7,16 @@
   <AppFooter />
 </template>
 
+<script setup lang="ts">
+import { useTitle } from '@vueuse/core'
+const route = useRoute()
+const title = computed(() => {
+  const title = route.meta?.title || route.matched[0].meta?.title || ''
+  return title ? `${title} | Vitify Admin` : 'Vitify Admin'
+})
+useTitle(title)
+</script>
+
 <style scoped lang="scss">
 .v-main {
   padding-top: 0;
