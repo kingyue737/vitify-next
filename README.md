@@ -81,7 +81,7 @@ Currently I want to keep this template as light as possible, see [Vitify Admin](
 - [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components) - Auto import Vuetify 2 components
 - [`unplugin-auto-import`](https://github.com/antfu/unplugin-auto-import) - Directly use Vue Composition API and others without importing
 - [VueUse](https://github.com/antfu/vueuse) - Collection of useful composition APIs
-- [`vite-svg-loader`](https://github.com/pakholeung37/vite-plugin-vue2-svg) - SVG files are loaded as Vue components, optimised via [SVGO](https://github.com/svg/svgo) and auto registered as Vuetify `v-icon`s
+- [`vite-svg-loader`](https://github.com/jpkleemans/vite-svg-loader) - SVG files are loaded as Vue components, optimised via [SVGO](https://github.com/svg/svgo) and auto registered as Vuetify `v-icon`s
 
 ### Coding Style
 
