@@ -7,7 +7,6 @@
 </template>
 <style scoped lang="scss">
 .v-footer {
-  transition: all 0.2s;
   border-width: 1px 0 0 0;
   padding: 0px 10px;
   :deep(> .v-btn--icon) {
