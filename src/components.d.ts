@@ -22,6 +22,5 @@ declare module '@vue/runtime-core' {
     ChartRadar: typeof import('./components/demo-charts/ChartRadar.vue')['default']
     RouterWrapper: typeof import('./components/layout/RouterWrapper.vue')['default']
     StatsCard: typeof import('./components/StatsCard.vue')['default']
-    VChart: typeof import('vue-echarts')['default']
   }
 }
