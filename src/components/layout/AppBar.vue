@@ -23,6 +23,11 @@ const breadcrumbs = computed(() => {
     <v-breadcrumbs :items="breadcrumbs"> </v-breadcrumbs>
     <v-spacer />
     <div id="app-bar"></div>
+    <v-btn
+      icon="$mdi-github"
+      href="https://github.com/kingyue737/vitify-next"
+      target="_blank"
+    />
   </v-app-bar>
 </template>
 
