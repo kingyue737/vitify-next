@@ -1,11 +1,10 @@
 {
   "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "include": ["src/**/*", "src/**/*.vue"],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "composite": true,
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
-    "types": ["vite-plugin-vue-layouts/client"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
