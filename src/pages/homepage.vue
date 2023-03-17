@@ -8,7 +8,7 @@ function warning() {
 }
 definePage({
   meta: {
-    icon: '$mdi-home',
+    icon: 'mdi-home',
     title: 'Homepage',
     drawerIndex: 0,
   },

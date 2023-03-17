@@ -32,7 +32,7 @@ function toggleAll() {
         size="x-small"
         variant="flat"
         :icon="
-          notifications.length ? '$mdi-bell-badge-outline' : '$mdi-bell-outline'
+          notifications.length ? 'mdi-bell-badge-outline' : 'mdi-bell-outline'
         "
         :rounded="0"
         v-bind="props"
@@ -57,7 +57,7 @@ function toggleAll() {
         </v-toolbar-title>
         <v-btn
           size="small"
-          icon="$mdi-bell-remove"
+          icon="mdi-bell-remove"
           title="清空所有通知"
           @click="emptyNotifications"
         >

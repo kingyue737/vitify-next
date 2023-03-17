@@ -2,7 +2,7 @@
 definePage({
   meta: {
     title: 'Menu 2',
-    icon: '$mdi-view-list',
+    icon: 'mdi-view-list',
   },
 })
 </script>

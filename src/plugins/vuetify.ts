@@ -3,53 +3,12 @@ import type { FunctionalComponent } from 'vue'
 import { createVuetify, type IconSet, type IconProps } from 'vuetify'
 import { en, zhHans } from 'vuetify/locale'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
-import {
-  mdiAccount,
-  mdiHome,
-  mdiPaletteOutline,
-  mdiWeatherSunny,
-  mdiWeatherNight,
-  mdiBellRemove,
-  mdiBellBadgeOutline,
-  mdiBellOutline,
-  mdiCloseCircle,
-  mdiAlertCircle,
-  mdiAnimation,
-  mdiViewList,
-  mdiWeb,
-  mdiRss,
-  mdiSend,
-  mdiBell,
-  mdiGithub,
-  mdiCurrencyCny,
-  mdiMonitorDashboard,
-} from '@mdi/js'
-import { mapKeys, kebabCase } from 'lodash'
+import { mdiAlertCircle, mdiCloseCircle } from '@mdi/js'
 import { useDark } from '@vueuse/core'
 
-const mdIcons = {
-  mdiAccount,
-  mdiHome,
-  mdiPaletteOutline,
-  mdiWeatherSunny,
-  mdiWeatherNight,
-  mdiBellRemove,
-  mdiBellBadgeOutline,
-  mdiBellOutline,
-  mdiAnimation,
-  mdiViewList,
-  mdiWeb,
-  mdiRss,
-  mdiSend,
-  mdiBell,
-  mdiGithub,
-  mdiCurrencyCny,
-  mdiMonitorDashboard,
-}
-const mdIconAlias = mapKeys(mdIcons, (v, k) => kebabCase(k))
 // fix vuetify#16870(https://github.com/vuetifyjs/vuetify/issues/16870)
-mdIconAlias['warning'] = mdiAlertCircle
-mdIconAlias['error'] = mdiCloseCircle
+aliases['warning'] = mdiAlertCircle
+aliases['error'] = mdiCloseCircle
 
 function filename(path: string) {
   return path
@@ -103,10 +62,7 @@ export default createVuetify({
   },
   icons: {
     defaultSet: 'mdi',
-    aliases: {
-      ...aliases,
-      ...mdIconAlias,
-    },
+    aliases,
     sets: { mdi, custom },
   },
   display: {

@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@pinia/testing": "^0.0.15",
+    "@rollup/plugin-replace": "^5.0.2",
     "@rushstack/eslint-patch": "^1.2.0",
     "@testing-library/vue": "^7.0.0",
     "@types/jsdom": "^21.1.0",

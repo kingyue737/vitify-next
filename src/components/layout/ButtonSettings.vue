@@ -52,7 +52,7 @@ const toggleDark = useToggle(isDark)
           <v-btn
             size="x-small"
             variant="flat"
-            icon="$mdi-palette-outline"
+            icon="mdi-palette-outline"
             v-bind="mergeProps(menu, tooltip)"
             :rounded="0"
           >
@@ -77,7 +77,7 @@ const toggleDark = useToggle(isDark)
           :model-value="isDark"
           label="黑暗模式"
           hide-details
-          :append-icon="isDark ? '$mdi-weather-night' : '$mdi-weather-sunny'"
+          :append-icon="isDark ? 'mdi-weather-night' : 'mdi-weather-sunny'"
           @update:model-value="toggleDark"
         />
         <v-divider class="my-3" />

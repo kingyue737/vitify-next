@@ -1,14 +1,14 @@
 <script setup lang="ts">
 definePage({
   meta: {
-    icon: '$mdi-monitor-dashboard',
+    icon: 'mdi-monitor-dashboard',
     title: 'Dashboard',
     drawerIndex: 1,
   },
 })
 const stats = ref([
   {
-    icon: '$mdi-web',
+    icon: 'mdi-web',
     title: 'Bandwidth',
     value: 230,
     unit: 'GB',
@@ -16,35 +16,35 @@ const stats = ref([
     caption: 'Up: 100, Down: 130',
   },
   {
-    icon: '$mdi-rss',
+    icon: 'mdi-rss',
     title: 'Submissions',
     value: 108,
     color: 'primary',
     caption: 'Too young, too naive',
   },
   {
-    icon: '$mdi-send',
+    icon: 'mdi-send',
     title: 'Requests',
     value: 1238,
     color: 'warning',
     caption: 'Limit: 1320',
   },
   {
-    icon: '$mdi-bell',
+    icon: 'mdi-bell',
     title: 'Messages',
     value: 9042,
     color: 'primary',
     caption: 'Warnings: 300, erros: 47',
   },
   {
-    icon: '$mdi-github',
+    icon: 'mdi-github',
     title: 'Github Stars',
     value: NaN,
     color: 'grey',
     caption: 'API has no response',
   },
   {
-    icon: '$mdi-currency-cny',
+    icon: 'mdi-currency-cny',
     title: 'Total Fee',
     value: 2300,
     unit: '￥',

@@ -24,7 +24,7 @@ const breadcrumbs = computed(() => {
     <v-spacer />
     <div id="app-bar"></div>
     <v-btn
-      icon="$mdi-github"
+      icon="mdi-github"
       href="https://github.com/kingyue737/vitify-next"
       target="_blank"
     />

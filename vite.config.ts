@@ -9,7 +9,9 @@ import Components from 'unplugin-vue-components/vite'
 import VueRouter from 'unplugin-vue-router/vite'
 import Layouts from 'vite-plugin-vue-layouts'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
-
+import Replace from '@rollup/plugin-replace'
+import * as mdicons from '@mdi/js'
+import { mapKeys, kebabCase } from 'lodash'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -53,6 +55,12 @@ export default defineConfig({
       ],
       dts: 'src/auto-imports.d.ts',
       dirs: ['src/stores'],
+    }),
+    Replace({
+      exclude: ['node_modules/**', 'src/plugins/vuetify.ts'],
+      values: mapKeys(mdicons, (v, k) => kebabCase(k)),
+      sourceMap: false,
+      preventAssignment: false,
     }),
   ],
   css: {
