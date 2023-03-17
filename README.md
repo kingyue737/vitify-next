@@ -113,7 +113,7 @@ Currently I want to keep this template as light as possible, see [Vitify Admin](
 If you prefer to do it manually with the cleaner git history
 
 ```bash
-npx degit kingyue737/vitify-admin my-vitify-app
+npx degit kingyue737/vitify-next my-vitify-app
 cd my-vitify-app
 pnpm i
 ```
