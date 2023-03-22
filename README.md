@@ -44,7 +44,7 @@ Lightweight Vue 3 version of <a href="https://github.com/kingyue737/vitify-admin
 
 ### Admin Starter Template
 
-- 🪟 Layout with drawer, header, footer(status bar) and login page
+- 🪟 Default layout with drawer, header and footer
 
 - 🧭 Auto generated navigation drawer and breadcrumbs based on routes
 
