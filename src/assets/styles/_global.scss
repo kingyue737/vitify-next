@@ -11,3 +11,7 @@ html {
     background-color: #f2f5f8;
   }
 }
+
+.v-overlay__content > .v-card {
+  overflow-y: overlay !important;
+}

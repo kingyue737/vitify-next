@@ -112,7 +112,10 @@ nextTick(() => {
     }
   }
   .v-navigation-drawer__content {
-    overflow-y: overlay;
+    overflow-y: hidden;
+    &:hover {
+      overflow-y: overlay;
+    }
   }
   .drawer-footer {
     transition: all 0.2s;
@@ -137,6 +140,9 @@ nextTick(() => {
   }
   .v-list-item {
     transition: all 0.2s;
+  }
+  .v-img__img--contain {
+    object-fit: none;
   }
 }
 </style>
