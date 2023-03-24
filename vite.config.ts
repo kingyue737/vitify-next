@@ -9,7 +9,8 @@ import Components from 'unplugin-vue-components/vite'
 import VueRouter from 'unplugin-vue-router/vite'
 import Layouts from 'vite-plugin-vue-layouts'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
-import Replace from '@rollup/plugin-replace'
+// @ts-ignore next-line
+import Modify from 'rollup-plugin-modify'
 import * as mdicons from '@mdi/js'
 import { mapKeys, kebabCase } from 'lodash'
 // https://vitejs.dev/config/
@@ -56,11 +57,11 @@ export default defineConfig({
       dts: 'src/auto-imports.d.ts',
       dirs: ['src/stores'],
     }),
-    Replace({
-      exclude: ['node_modules/**', 'src/plugins/vuetify.ts'],
-      values: mapKeys(mdicons, (v, k) => kebabCase(k)),
-      sourceMap: false,
-      preventAssignment: false,
+    Modify({
+      find: /\b(?<![/\w])(mdi-[\w-]+)\b(?!\.)/,
+      replace: (match: string) =>
+        mapKeys(mdicons, (v, k) => kebabCase(k))[match],
+      sourcemap: false,
     }),
   ],
   css: {
