@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@kingyue/rollup-plugin-modify': ^4.0.0
   '@mdi/js': ^7.2.96
   '@pinia/testing': ^0.0.15
   '@rushstack/eslint-patch': ^1.2.0
@@ -23,7 +24,6 @@ specifiers:
   lodash: ^4.17.21
   pinia: ^2.0.33
   prettier: ^2.8.7
-  rollup-plugin-modify: ^3.0.0
   sass: ^1.60.0
   start-server-and-test: ^2.0.0
   typescript: ^4.9.5
@@ -53,6 +53,7 @@ dependencies:
   vuetify: 3.1.11_zhdigtlnoj4qfl4bi7c6fb2bly
 
 devDependencies:
+  '@kingyue/rollup-plugin-modify': 4.0.0
   '@pinia/testing': 0.0.15_pinia@2.0.33+vue@3.2.47
   '@rushstack/eslint-patch': 1.2.0
   '@testing-library/vue': 7.0.0_a2ihsjreowava2sm4iorpgwkom
@@ -70,7 +71,6 @@ devDependencies:
   eslint-plugin-vue: 9.10.0_eslint@8.36.0
   jsdom: 21.1.1
   prettier: 2.8.7
-  rollup-plugin-modify: 3.0.0
   sass: 1.60.0
   start-server-and-test: 2.0.0
   typescript: 4.9.5
@@ -421,6 +421,15 @@ packages:
 
   /@jridgewell/sourcemap-codec/1.4.14:
     resolution: {integrity: sha512-XPSJHWmi394fuUuzDnGz1wiKqWfo1yXecHQMRf2l6hztTO+nPru658AyDngaBe7isIxEkRsPR3FZh+s7iVa4Uw==}
+    dev: true
+
+  /@kingyue/rollup-plugin-modify/4.0.0:
+    resolution: {integrity: sha512-+Gm72Q8zdbKUiVhXIZnWyLg2ofEx4+aoj+t3R4PqhCEYJRWXn2mY02MjgzaTUmi0F2MWwtZ9VloSK7u3U3sA4w==}
+    dependencies:
+      '@rollup/pluginutils': 5.0.2
+      magic-string: 0.30.0
+    transitivePeerDependencies:
+      - rollup
     dev: true
 
   /@mdi/js/7.2.96:
@@ -2972,12 +2981,6 @@ packages:
       magic-string: 0.30.0
     dev: true
 
-  /magic-string/0.25.2:
-    resolution: {integrity: sha512-iLs9mPjh9IuTtRsqqhNGYcZXGei0Nh/A4xirrsqW7c+QhKVFL2vm7U09ru6cHRD22azaP/wMDgI+HCqbETMTtg==}
-    dependencies:
-      sourcemap-codec: 1.4.8
-    dev: true
-
   /magic-string/0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
     dependencies:
@@ -3201,13 +3204,6 @@ packages:
 
   /ospath/1.2.2:
     resolution: {integrity: sha512-o6E5qJV5zkAbIDNhGSIlyOhScKXgQrSRMilfph0clDfM0nEnBOlKlH4sWDmG95BW/CvwNz0vmm7dJVtU2KlMiA==}
-    dev: true
-
-  /ospec/3.1.0:
-    resolution: {integrity: sha512-+nGtjV3vlADp+UGfL51miAh/hB4awPBkQrArhcgG4trAaoA2gKt5bf9w0m9ch9zOr555cHWaCHZEDiBOkNZSxw==}
-    hasBin: true
-    dependencies:
-      glob: 7.2.3
     dev: true
 
   /p-limit/2.3.0:
@@ -3530,13 +3526,6 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
-    dev: true
-
-  /rollup-plugin-modify/3.0.0:
-    resolution: {integrity: sha512-p/ffs0Y2jz2dEnWjq1oVC7SY37tuS+aP7whoNaQz1EAAOPg+k3vKJo8cMMWx6xpdd0NzhX4y2YF9o/NPu5YR0Q==}
-    dependencies:
-      magic-string: 0.25.2
-      ospec: 3.1.0
     dev: true
 
   /rollup/3.20.2:
