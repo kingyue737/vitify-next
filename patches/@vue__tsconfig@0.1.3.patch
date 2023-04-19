@@ -1,0 +1,19 @@
+diff --git a/tsconfig.json b/tsconfig.json
+index ce4e7fcd2f54cfa9d12ee69b20902d7a6f884466..a2517d52cac53fc958b2cc909b9f1a9abd839513 100644
+--- a/tsconfig.json
++++ b/tsconfig.json
+@@ -14,13 +14,7 @@
+     "noImplicitThis": true,
+     "strict": true,
+ 
+-    // Required in Vite
+-    "isolatedModules": true,
+-    // For `<script setup>`
+-    // See <https://devblogs.microsoft.com/typescript/announcing-typescript-4-5-beta/#preserve-value-imports>
+-    "preserveValueImports": true,
+-    // Enforce using `import type` instead of `import` for types
+-    "importsNotUsedAsValues": "error",
++    "verbatimModuleSyntax": true,
+ 
+     // A few notes:
+     // - Vue 3 supports ES2016+
