@@ -39,6 +39,7 @@ declare module 'vue-router/auto/routes' {
     '/[...all]': RouteRecordInfo<'/[...all]', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
     '/dashboard': RouteRecordInfo<'/dashboard', '/dashboard', Record<never, never>, Record<never, never>>,
     '/homepage': RouteRecordInfo<'/homepage', '/homepage', Record<never, never>, Record<never, never>>,
+    '/labs': RouteRecordInfo<'/labs', '/labs', Record<never, never>, Record<never, never>>,
     '/nested': RouteRecordInfo<'/nested', '/nested', Record<never, never>, Record<never, never>>,
     '/nested/menu1': RouteRecordInfo<'/nested/menu1', '/nested/menu1', Record<never, never>, Record<never, never>>,
     '/nested/menu2': RouteRecordInfo<'/nested/menu2', '/nested/menu2', Record<never, never>, Record<never, never>>,

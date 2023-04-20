@@ -3,7 +3,7 @@ definePage({
   meta: {
     title: 'Nested Routes',
     icon: 'mdi-view-list',
-    drawerIndex: 10,
+    drawerIndex: 2,
     breadcrumb: 'disabled',
   },
 })
