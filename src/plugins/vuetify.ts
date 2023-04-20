@@ -4,16 +4,11 @@ import { createVuetify, type IconSet, type IconProps } from 'vuetify'
 import { VDataTable } from 'vuetify/labs/VDataTable'
 import { en, zhHans } from 'vuetify/locale'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
-import { mdiAlertCircle, mdiCloseCircle } from '@mdi/js'
 import { useDark } from '@vueuse/core'
 
 type Headers = InstanceType<typeof VDataTable>['headers']
 type ArrayArrayItems<T> = T extends Array<Array<infer I>> ? I : never
 export type DataTableHeader = ArrayArrayItems<Headers>
-
-// fix vuetify#16870(https://github.com/vuetifyjs/vuetify/issues/16870)
-aliases['warning'] = mdiAlertCircle
-aliases['error'] = mdiCloseCircle
 
 function filename(path: string) {
   return path

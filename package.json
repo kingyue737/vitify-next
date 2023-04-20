@@ -13,24 +13,23 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@mdi/js": "^7.2.96",
     "@vueuse/core": "^10.0.2",
     "echarts": "^5.4.2",
-    "lodash": "^4.17.21",
     "pinia": "^2.0.34",
     "vue": "^3.2.47",
     "vue-echarts": "^6.5.4",
     "vue-router": "^4.1.6",
-    "vuetify": "^3.1.14"
+    "vuetify": "^3.1.15"
   },
   "devDependencies": {
     "@kingyue/rollup-plugin-modify": "^4.1.0",
+    "@mdi/js": "^7.2.96",
     "@pinia/testing": "^0.0.16",
     "@rushstack/eslint-patch": "^1.2.0",
     "@testing-library/vue": "^7.0.0",
     "@types/jsdom": "^21.1.1",
     "@types/lodash": "^4.14.194",
-    "@types/node": "^18.15.11",
+    "@types/node": "^18.15.12",
     "@vitejs/plugin-vue": "^4.1.0",
     "@vue/eslint-config-prettier": "^7.1.0",
     "@vue/eslint-config-typescript": "^11.0.2",
@@ -41,6 +40,7 @@
     "eslint-plugin-cypress": "^2.13.2",
     "eslint-plugin-vue": "^9.11.0",
     "jsdom": "^21.1.1",
+    "lodash": "^4.17.21",
     "prettier": "^2.8.7",
     "sass": "^1.62.0",
     "start-server-and-test": "^2.0.0",
