@@ -1,10 +1,12 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "extends": "@vue/tsconfig/tsconfig.json",
   "include": ["src/**/*", "src/**/*.vue"],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "composite": true,
+    "moduleResolution": "node",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "types": [],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
