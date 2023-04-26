@@ -39,9 +39,6 @@ devDependencies:
   '@testing-library/vue':
     specifier: ^7.0.0
     version: 7.0.0(@vue/compiler-sfc@3.2.47)(vue@3.2.47)
-  '@tsconfig/node18':
-    specifier: ^2.0.0
-    version: 2.0.0
   '@types/jsdom':
     specifier: ^21.1.1
     version: 21.1.1
@@ -577,10 +574,6 @@ packages:
   /@trysound/sax@0.2.0:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
-    dev: true
-
-  /@tsconfig/node18@2.0.0:
-    resolution: {integrity: sha512-uI/B0ShkiEwTk036pncXucVlj4y11EW6mycQvCEzC1PkR2TBvdQZ5Wf96dp+XXWAc70FEDfvwTqanoaDpP6rPw==}
     dev: true
 
   /@types/aria-query@5.0.1:
