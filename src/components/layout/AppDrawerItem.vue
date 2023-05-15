@@ -1,55 +1,21 @@
-<script lang="ts">
-import type { PropType } from 'vue'
+<script setup lang="ts">
 import type { RouteRecordRaw } from 'vue-router/auto'
-
-export default defineComponent({
-  name: 'AppDrawerItem',
-  props: {
-    level: {
-      type: Number,
-      default: 0,
-    },
-    item: {
-      type: Object as PropType<RouteRecordRaw>,
-      required: true,
-    },
-  },
-  computed: {
-    isItem() {
-      return !this.item.children || this.visibleChildrenNum <= 1
-    },
-    indexItem() {
-      if (this.item.children) {
-        return this.item.children[0]
-      } else {
-        return this.item
-      }
-    },
-    icon() {
-      return this.item.meta?.icon || undefined
-    },
-    title() {
-      return this.item.meta?.title || ''
-    },
-    visibleChildren() {
-      return this.item.children
-        ?.filter((child) => child.meta?.icon)
-        .sort(
-          (a, b) => (a.meta?.drawerIndex ?? 99) - (b.meta?.drawerIndex ?? 98)
-        )
-    },
-    visibleChildrenNum() {
-      return this.visibleChildren?.length || 0
-    },
-    group() {
-      return (
-        this.item.path ||
-        this.item.name ||
-        this.item.children?.find((v) => !v.path)?.name
-      )
-    },
-  },
-})
+defineOptions({ name: 'AppDrawerItem' })
+const props = withDefaults(
+  defineProps<{ level: number; item: RouteRecordRaw }>(),
+  { level: 0 }
+)
+const visibleChildren = computed(() =>
+  props.item.children
+    ?.filter((child) => child.meta?.icon)
+    .sort((a, b) => (a.meta?.drawerIndex ?? 99) - (b.meta?.drawerIndex ?? 98))
+)
+const visibleChildrenNum = computed(() => visibleChildren.value?.length || 0)
+const isItem = computed(
+  () => !props.item.children || visibleChildrenNum.value <= 1
+)
+const title = computed(() => props.item.meta?.title)
+const icon = computed(() => props.item.meta?.icon)
 </script>
 
 <template>
@@ -62,8 +28,8 @@ export default defineComponent({
   >
   </v-list-item>
   <v-list-group v-else-if="icon" :prepend-icon="icon" active-color="primary">
-    <template #activator="{ props }">
-      <v-list-item :title="title" v-bind="props"></v-list-item>
+    <template #activator="{ props: vProps }">
+      <v-list-item :title="title" v-bind="vProps"></v-list-item>
     </template>
     <AppDrawerItem
       v-for="child in visibleChildren"
@@ -73,5 +39,3 @@ export default defineComponent({
     />
   </v-list-group>
 </template>
-
-<style lang="scss" scoped></style>
