@@ -6,9 +6,9 @@ import { en, zhHans } from 'vuetify/locale'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 import { useDark } from '@vueuse/core'
 
-type Headers = InstanceType<typeof VDataTable>['headers']
-type ArrayArrayItems<T> = T extends Array<Array<infer I>> ? I : never
-export type DataTableHeader = ArrayArrayItems<Headers>
+type UnwrapReadonlyArrayType<A> = A extends Readonly<Array<infer I>> ? UnwrapReadonlyArrayType<I> : A
+type DT = InstanceType<typeof VDataTable>;
+export type DataTableHeader = UnwrapReadonlyArrayType<DT['headers']>;
 
 function filename(path: string) {
   return path

@@ -99,7 +99,7 @@ const toggleDark = useToggle(isDark)
                 <v-sheet
                   rounded="lg"
                   :class="[selectedClass, 'bg-sheet']"
-                  @click="toggle"
+                  @click="toggle!"
                 >
                   <v-img
                     :src="img"
