@@ -1,5 +1,8 @@
 html {
   overflow-y: auto;
+  &.dark {
+    color-scheme: dark;
+  }
 }
 
 .v-card--variant-elevated:not(.v-card--flat) {
