@@ -2,7 +2,7 @@
 import type { RouteRecordRaw } from 'vue-router/auto'
 defineOptions({ name: 'AppDrawerItem' })
 const props = withDefaults(
-  defineProps<{ level: number; item: RouteRecordRaw }>(),
+  defineProps<{ level?: number; item: RouteRecordRaw }>(),
   { level: 0 }
 )
 const visibleChildren = computed(() =>
@@ -27,7 +27,7 @@ const icon = computed(() => props.item.meta?.icon)
     :title="title"
   >
   </v-list-item>
-  <v-list-group v-else-if="icon" :prepend-icon="icon" active-color="primary">
+  <v-list-group v-else-if="icon" :prepend-icon="icon" color="primary">
     <template #activator="{ props: vProps }">
       <v-list-item :title="title" v-bind="vProps"></v-list-item>
     </template>
