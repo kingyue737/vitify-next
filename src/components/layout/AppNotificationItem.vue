@@ -34,9 +34,8 @@ if (isActive.value) {
 
 <template>
   <v-alert
-    dismissible
     :border="variant ? 'start' : false"
-    :variant="variant ? 'outlined' : 'tonal'"
+    :variant="variant ? 'outlined' : undefined"
     :density="variant ? 'compact' : undefined"
     :elevation="variant ? 0 : 3"
     :type="notification.type"
