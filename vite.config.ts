@@ -12,16 +12,21 @@ import { VueRouterAutoImports } from 'unplugin-vue-router'
 import Modify from '@kingyue/rollup-plugin-modify'
 import * as mdicons from '@mdi/js'
 import { mapKeys } from 'lodash'
+
+const mdi = mapKeys(mdicons, (v, k) =>
+  k.replace(
+    /[A-Z]+(?![a-z])|[A-Z0-9]/g,
+    ($, ofs) => (ofs ? '-' : '') + $.toLowerCase(),
+  ),
+)
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     Modify({
       exclude: ['node_modules/**'],
       find: /\b(?<![/\w])(mdi-[\w-]+)\b(?!\.)/,
-      replace: (match: string) =>
-        mapKeys(mdicons, (v, k) =>
-          k.replace(/([a-z])([A-Z0-9])/g, '$1-$2').toLowerCase(),
-        )[match],
+      replace: (match: string) => mdi[match],
       sourcemap: false,
     }),
     VueRouter({ importMode: 'sync', dts: './src/typed-router.d.ts' }),
