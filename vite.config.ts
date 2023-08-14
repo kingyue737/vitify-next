@@ -11,7 +11,7 @@ import Layouts from 'vite-plugin-vue-layouts'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import Modify from '@kingyue/rollup-plugin-modify'
 import * as mdicons from '@mdi/js'
-import { mapKeys, kebabCase } from 'lodash'
+import { mapKeys } from 'lodash'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -19,7 +19,9 @@ export default defineConfig({
       exclude: ['node_modules/**'],
       find: /\b(?<![/\w])(mdi-[\w-]+)\b(?!\.)/,
       replace: (match: string) =>
-        mapKeys(mdicons, (v, k) => kebabCase(k))[match],
+        mapKeys(mdicons, (v, k) =>
+          k.replace(/([a-z])([A-Z0-9])/g, '$1-$2').toLowerCase(),
+        )[match],
       sourcemap: false,
     }),
     VueRouter({ importMode: 'sync', dts: './src/typed-router.d.ts' }),
