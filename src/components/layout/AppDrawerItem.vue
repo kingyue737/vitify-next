@@ -3,16 +3,19 @@ import type { RouteRecordRaw } from 'vue-router/auto'
 defineOptions({ name: 'AppDrawerItem' })
 const props = withDefaults(
   defineProps<{ level?: number; item: RouteRecordRaw }>(),
-  { level: 0 }
+  { level: 0 },
 )
-const visibleChildren = computed(() =>
-  props.item.children
-    ?.filter((child) => child.meta?.icon)
-    .sort((a, b) => (a.meta?.drawerIndex ?? 99) - (b.meta?.drawerIndex ?? 98))
+const visibleChildren = computed(
+  () =>
+    props.item.children
+      ?.filter((child) => child.meta?.icon)
+      .sort(
+        (a, b) => (a.meta?.drawerIndex ?? 99) - (b.meta?.drawerIndex ?? 98),
+      ),
 )
 const visibleChildrenNum = computed(() => visibleChildren.value?.length || 0)
 const isItem = computed(
-  () => !props.item.children || visibleChildrenNum.value <= 1
+  () => !props.item.children || visibleChildrenNum.value <= 1,
 )
 const title = computed(() => props.item.meta?.title)
 const icon = computed(() => props.item.meta?.icon)

@@ -9,7 +9,7 @@ const props = withDefaults(
     notification: Notification
     variant: boolean
   }>(),
-  { modelValue: false, timeout: 5000 }
+  { modelValue: false, timeout: 5000 },
 )
 const emit = defineEmits(['update:modelValue', 'close'])
 const isActive = useVModel(props, 'modelValue', emit)

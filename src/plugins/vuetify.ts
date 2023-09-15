@@ -6,9 +6,11 @@ import { en, zhHans } from 'vuetify/locale'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 import { useDark } from '@vueuse/core'
 
-type UnwrapReadonlyArrayType<A> = A extends Readonly<Array<infer I>> ? UnwrapReadonlyArrayType<I> : A
-type DT = InstanceType<typeof VDataTable>;
-export type DataTableHeader = UnwrapReadonlyArrayType<DT['headers']>;
+type UnwrapReadonlyArrayType<A> = A extends Readonly<Array<infer I>>
+  ? UnwrapReadonlyArrayType<I>
+  : A
+type DT = InstanceType<typeof VDataTable>
+export type DataTableHeader = UnwrapReadonlyArrayType<DT['headers']>
 
 function filename(path: string) {
   return path
@@ -23,8 +25,8 @@ const svgIcons = Object.fromEntries(
       eager: true,
       import: 'default',
       as: 'component',
-    })
-  ).map(([k, v]) => [filename(k), v])
+    }),
+  ).map(([k, v]) => [filename(k), v]),
 )
 const custom: IconSet = {
   component: (props: IconProps) =>

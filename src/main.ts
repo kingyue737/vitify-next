@@ -6,7 +6,10 @@ import '@/assets/styles/index.scss'
 const app = createApp(App)
 
 Object.values(
-  import.meta.glob<Plugin>('./plugins/*.ts', { eager: true, import: 'default' })
+  import.meta.glob<Plugin>('./plugins/*.ts', {
+    eager: true,
+    import: 'default',
+  }),
 ).forEach((v) => app.use(v))
 
 app.mount('#app')

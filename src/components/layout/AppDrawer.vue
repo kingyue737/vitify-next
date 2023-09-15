@@ -21,7 +21,7 @@ const rail = computed(() => !drawerStored.value && !mobile.value)
 const gradient = computed(() =>
   useTheme().current.value.dark
     ? 'to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .7)'
-    : 'to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, .7)'
+    : 'to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, .7)',
 )
 routes.sort((a, b) => (a.meta?.drawerIndex ?? 99) - (b.meta?.drawerIndex ?? 98))
 

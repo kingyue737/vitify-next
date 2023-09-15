@@ -3,7 +3,7 @@ import { THEME_KEY } from 'vue-echarts'
 const theme = useTheme()
 provide(
   THEME_KEY,
-  computed(() => (theme.current.value.dark ? 'dark' : undefined))
+  computed(() => (theme.current.value.dark ? 'dark' : undefined)),
 )
 </script>
 

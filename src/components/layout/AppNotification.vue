@@ -2,7 +2,7 @@
 const notificationStore = useNotificationStore()
 const { notifications } = storeToRefs(notificationStore)
 const notificationsShown = computed(() =>
-  notifications.value.filter((notification) => notification.show).reverse()
+  notifications.value.filter((notification) => notification.show).reverse(),
 )
 const showAll = ref(false)
 const timeout = ref(5000)

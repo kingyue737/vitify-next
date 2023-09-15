@@ -6,7 +6,7 @@ const breadcrumbs = computed(() => {
     .slice(1)
     .filter(
       (item) =>
-        item.meta && item.meta.title && !(item.meta?.breadcrumb === 'hidden')
+        item.meta && item.meta.title && !(item.meta?.breadcrumb === 'hidden'),
     )
     .map((r) => ({
       title: r.meta.title!,
