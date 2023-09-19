@@ -132,7 +132,6 @@ nextTick(() => {
     height: 1.2em !important;
     width: 1.2em !important;
     transition: all 0.2s;
-    margin-inline-end: 24px !important;
   }
   .v-list-group {
     // --list-indent-size: 10px;
