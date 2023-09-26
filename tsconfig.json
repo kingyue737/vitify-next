@@ -10,5 +10,17 @@
     {
       "path": "./tsconfig.vitest.json"
     }
-  ]
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "ESNext",
+      "lib": ["es2023"],
+      "target": "es2022",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "moduleResolution": "Node10",
+      "forceConsistentCasingInFileNames": true
+    }
+  }
 }
