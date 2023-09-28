@@ -31,6 +31,7 @@ function toggleAll() {
       <v-btn
         size="x-small"
         variant="flat"
+        color=""
         :icon="
           notifications.length ? 'mdi-bell-badge-outline' : 'mdi-bell-outline'
         "

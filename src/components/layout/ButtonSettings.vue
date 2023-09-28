@@ -52,6 +52,7 @@ const toggleDark = useToggle(isDark)
           <v-btn
             size="x-small"
             variant="flat"
+            color=""
             icon="mdi-palette-outline"
             v-bind="mergeProps(menu, tooltip)"
             :rounded="0"

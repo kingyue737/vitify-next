@@ -21,7 +21,7 @@ const rail = computed(() => !drawerStored.value && !mobile.value)
 const gradient = computed(() =>
   useTheme().current.value.dark
     ? 'to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .7)'
-    : 'to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, .7)',
+    : 'to bottom, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, .8) 80%, rgba(255, 255, 255, 1) 100%',
 )
 routes.sort((a, b) => (a.meta?.drawerIndex ?? 99) - (b.meta?.drawerIndex ?? 98))
 
@@ -57,7 +57,10 @@ nextTick(() => {
               color="primary"
             />
           </template>
-          <v-list-item-title class="text-h5" style="line-height: 2rem">
+          <v-list-item-title
+            class="text-h5 font-weight-bold"
+            style="line-height: 2rem"
+          >
             Vitify <span class="text-primary">Admin</span>
           </v-list-item-title>
         </v-list-item>
@@ -70,18 +73,18 @@ nextTick(() => {
     <v-spacer />
     <template #append>
       <v-list-item class="drawer-footer px-0 d-flex flex-column justify-center">
-        <div class="text-body-2 font-weight-light pt-6 pt-md-0 text-center">
+        <div class="text-caption pt-6 pt-md-0 text-center">
           &copy; Copyright 2023
           <a
             href="https://github.com/kingyue737"
-            class="font-weight-regular"
+            class="font-weight-bold"
             target="_blank"
             >Yue JIN</a
           >
           <span> & </span>
           <a
             href="https://www.nustarnuclear.com/"
-            class="font-weight-regular"
+            class="font-weight-bold"
             target="_blank"
             >NuStar</a
           >
@@ -93,9 +96,18 @@ nextTick(() => {
 
 <style lang="scss">
 .v-navigation-drawer {
+  transition-property: box-shadow, transform, visibility, width, height, left,
+    right, top, bottom, border-radius !important;
+  overflow: hidden;
   &.v-navigation-drawer--rail {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
     &.v-navigation-drawer--is-hovering {
-      box-shadow: 0px 0px 6px 2px rgba(100, 100, 100, 0.6);
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      box-shadow:
+        0px 1px 2px 0px rgb(0 0 0 / 30%),
+        0px 1px 3px 1px rgb(0 0 0 / 15%);
     }
     &:not(.v-navigation-drawer--is-hovering) {
       .drawer-footer {

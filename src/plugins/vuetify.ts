@@ -5,6 +5,7 @@ import { VDataTable } from 'vuetify/labs/VDataTable'
 import { en, zhHans } from 'vuetify/locale'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 import { useDark } from '@vueuse/core'
+import { md3 } from 'vuetify/blueprints'
 
 type UnwrapReadonlyArrayType<A> = A extends Readonly<Array<infer I>>
   ? UnwrapReadonlyArrayType<I>
@@ -41,6 +42,7 @@ const theme = {
 }
 
 export default createVuetify({
+  blueprint: md3,
   components: { VDataTable },
   locale: {
     locale: 'zhHans',
@@ -54,6 +56,17 @@ export default createVuetify({
     VDataTable: {
       fixedHeader: true,
       hover: true,
+    },
+    VCard: {
+      flat: true,
+    },
+    VNavigationDrawer: {
+      VList: {
+        nav: true,
+        VListItem: {
+          rounded: 'xl',
+        },
+      },
     },
   },
   theme: {

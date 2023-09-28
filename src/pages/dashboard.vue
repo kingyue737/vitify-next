@@ -105,6 +105,6 @@ const stats = ref([
 
 <style scoped lang="scss">
 .v-card:not(.stats-card) {
-  height: 350px;
+  height: 340px;
 }
 </style>

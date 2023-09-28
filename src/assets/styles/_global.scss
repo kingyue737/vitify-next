@@ -18,3 +18,7 @@ html {
 .v-overlay__content > .v-card {
   overflow-y: overlay !important;
 }
+
+.v-btn {
+  text-transform: initial;
+}
