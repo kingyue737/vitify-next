@@ -4,7 +4,6 @@
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "composite": true,
-    "moduleResolution": "node",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "types": [],
     "baseUrl": ".",
