@@ -26,7 +26,7 @@ const icon = computed(() => props.item.meta?.icon)
     v-if="isItem && icon"
     :to="{ name: item.name || visibleChildren?.[0].name }"
     :prepend-icon="icon"
-    active-class="bg-primary text-white"
+    active-class="text-primary"
     :title="title"
   >
   </v-list-item>

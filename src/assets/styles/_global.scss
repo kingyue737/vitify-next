@@ -10,9 +10,18 @@ html {
 }
 
 .v-theme--light {
-  .v-main {
-    background-color: #f2f5f8;
+  &.v-icon--clickable,
+  &.v-btn--icon {
+    color: rgba(0, 0, 0, 0.54);
   }
+  --v-border-opacity: 0.09 !important;
+  --v-theme-background: 243, 243, 243 !important;
+}
+
+.v-app-bar,
+.v-navigation-drawer,
+.v-footer {
+  background-color: rgb(var(--v-theme-background)) !important;
 }
 
 .v-overlay__content > .v-card {

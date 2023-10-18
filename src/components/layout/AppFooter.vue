@@ -1,8 +1,12 @@
 <template>
   <v-footer app border>
     <v-spacer />
-    <AppNotification />
-    <ButtonSettings />
+    <v-defaults-provider
+      :defaults="{ VBtn: { variant: 'text', size: 'x-small' } }"
+    >
+      <AppNotification />
+      <ButtonSettings />
+    </v-defaults-provider>
   </v-footer>
 </template>
 <style scoped lang="scss">

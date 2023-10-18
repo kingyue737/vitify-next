@@ -59,7 +59,9 @@ export default createVuetify({
     },
     VCard: {
       flat: true,
+      border: true,
     },
+    VBtn: { color: undefined },
     VNavigationDrawer: {
       VList: {
         nav: true,
@@ -68,6 +70,7 @@ export default createVuetify({
         },
       },
     },
+    VChip: { rounded: 'lg' },
   },
   theme: {
     defaultTheme: useDark().value ? 'dark' : 'light',

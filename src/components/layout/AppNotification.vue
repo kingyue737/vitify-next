@@ -29,9 +29,6 @@ function toggleAll() {
   <v-tooltip location="top">
     <template #activator="{ props }">
       <v-btn
-        size="x-small"
-        variant="flat"
-        color=""
         :icon="
           notifications.length ? 'mdi-bell-badge-outline' : 'mdi-bell-outline'
         "
