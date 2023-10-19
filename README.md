@@ -38,7 +38,7 @@ Lightweight Vue 3 version of <a href="https://github.com/kingyue737/vitify-admin
 
 - ☁️ Deploy on [Netlify](https://www.netlify.com/), zero-config
 
-- 🧪 Unit/Component Testing with [Vitest](https://github.com/vitest-dev/vitest) + [Testing Library](https://github.com/testing-library/vue-testing-library), E2E Testing with [Cypress](https://cypress.io/) on [GitHub Actions](https://github.com/features/actions)
+- 🧪 Unit/Component Testing with [Vitest](https://github.com/vitest-dev/vitest) + [Testing Library](https://github.com/testing-library/vue-testing-library), E2E Testing with [Playwright](https://playwright.dev/) on [GitHub Actions](https://github.com/features/actions)
 
 <br>
 
@@ -92,10 +92,10 @@ Currently I want to keep this template as light as possible, see [Vitify Admin](
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vitest](https://github.com/vitest-dev/vitest) - Unit testing powered by Vite
-- [Cypress](https://cypress.io/) - E2E testing
 - [pnpm](https://pnpm.js.org/) - Fast, disk space efficient package manager
 - [Netlify](https://www.netlify.com/) - zero-config deployment
 - [VS Code Extensions](./.vscode/extensions.json)
+  - [Playwright](https://playwright.dev/docs/getting-started-vscode) - E2E testing
   - [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) - TypeScript support inside Vue SFCs
   - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - Find and fix problems in your code
   - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Code formatter

@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "vue.volar",
+    "ms-playwright.playwright",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "editorconfig.editorconfig",

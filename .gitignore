@@ -14,8 +14,8 @@ dist-ssr
 coverage
 *.local
 
-/cypress/videos/
-/cypress/screenshots/
+test-results/
+playwright-report/
 
 # Editor directories and files
 !.vscode/extensions.json
