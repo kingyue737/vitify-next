@@ -24,6 +24,13 @@
 Lightweight Vue 3 version of <a href="https://github.com/kingyue737/vitify-admin">Vitify Admin<br><br></a>
 </p>
 
+## Variants
+
+- [vitify-nuxt](https://github.com/kingyue737/vitify-nuxt) - Vuetify 3 with Nuxt 3, the best DX 🔥🔥🔥
+
+- [vitify-electron](https://github.com/kingyue737/vitify-electron) - Vuetify 3 with Electron
+- [vitify-admin](https://github.com/kingyue737/vitify-admin) - Vuetify 2 but with full Typescript support and Vite
+
 ## Features
 
 - ⚡️ [Vite 4](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
@@ -106,7 +113,7 @@ Currently I want to keep this template as light as possible, see [Vitify Admin](
 
 ### GitHub Template
 
-[Create a repo from this template on GitHub](https://github.com/kingyue737/vitify-admin/generate).
+[Create a repo from this template on GitHub](https://github.com/kingyue737/vitify-next/generate).
 
 ### Clone to local
 
