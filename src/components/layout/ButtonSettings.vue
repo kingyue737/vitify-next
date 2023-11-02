@@ -1,17 +1,9 @@
 <script setup lang="ts">
-import { useAppStore } from '@/stores/app'
-import { useDark, useToggle } from '@vueuse/core'
+import { useColorMode } from '@vueuse/core'
 import { mergeProps } from 'vue'
-import drawer1 from '@/assets/images/drawer1.jpg'
-import drawer2 from '@/assets/images/drawer2.jpg'
-import drawer3 from '@/assets/images/drawer3.jpg'
 
-const appStore = useAppStore()
-const { drawerImage, drawerImageShow } = storeToRefs(appStore)
-if (drawerImage.value) {
-  drawerImage.value = drawer1
-}
 const theme = useTheme()
+const { store } = useColorMode()
 const color = computed({
   get() {
     return theme.themes.value.light.colors.primary
@@ -29,14 +21,7 @@ const colors = [
   ['#304156', '#3f51b5'],
   ['#002FA7', '#492d22'],
 ]
-const images = [drawer1, drawer2, drawer3]
 const menuShow = ref(false)
-const isDark = useDark({
-  onChanged(dark: boolean) {
-    theme.global.name.value = dark ? 'dark' : 'light'
-  },
-})
-const toggleDark = useToggle(isDark)
 </script>
 
 <template>
@@ -56,12 +41,12 @@ const toggleDark = useToggle(isDark)
           >
           </v-btn>
         </template>
-        <span>界面设置</span>
+        <span>Theme Palette</span>
       </v-tooltip>
     </template>
     <v-card width="320">
       <v-card-text class="text-center">
-        <v-label class="mb-3">主题色</v-label>
+        <v-label class="mb-3">Theme Palette</v-label>
         <v-color-picker
           v-model="color"
           show-swatches
@@ -71,47 +56,13 @@ const toggleDark = useToggle(isDark)
           :modes="['rgb', 'hex', 'hsl']"
           :swatches="colors"
         ></v-color-picker>
-        <v-divider class="my-3" />
-        <v-switch
-          :model-value="isDark"
-          label="黑暗模式"
-          hide-details
-          :append-icon="isDark ? 'mdi-weather-night' : 'mdi-weather-sunny'"
-          @update:model-value="toggleDark"
-        />
-        <v-divider class="my-3" />
-        <v-switch
-          v-model="drawerImageShow"
-          label="侧边栏背景"
-          hide-details
-          append-icon="$menu"
-        />
-        <v-card :disabled="!drawerImageShow" flat :border="false">
-          <v-item-group
-            v-model="drawerImage"
-            class="d-flex justify-space-between mb-3"
-            selected-class="bg-sheet--active"
-            mandatory
+        <v-btn-toggle v-model="store" mandatory class="mt-2" rounded="lg">
+          <v-btn prepend-icon="mdi-white-balance-sunny" value="light"
+            >Light</v-btn
           >
-            <v-item v-for="img in images" :key="img" :value="img">
-              <template #default="{ selectedClass, toggle }">
-                <v-sheet
-                  rounded="lg"
-                  :class="[selectedClass, 'bg-sheet']"
-                  @click="toggle!"
-                >
-                  <v-img
-                    :src="img"
-                    cover
-                    height="100"
-                    width="60"
-                    @click="toggle"
-                  />
-                </v-sheet>
-              </template>
-            </v-item>
-          </v-item-group>
-        </v-card>
+          <v-btn prepend-icon="mdi-weather-night" value="dark">Dark</v-btn>
+          <v-btn prepend-icon="mdi-laptop" value="auto">System</v-btn>
+        </v-btn-toggle>
       </v-card-text>
     </v-card>
   </v-menu>

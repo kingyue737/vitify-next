@@ -31,3 +31,13 @@ html {
 .v-btn {
   text-transform: initial;
 }
+
+.v-tab {
+  border-radius: 0 !important;
+}
+
+.v-field--active {
+  .v-icon {
+    color: rgb(var(--v-theme-primary));
+  }
+}
