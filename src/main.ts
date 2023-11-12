@@ -1,7 +1,7 @@
 import { createApp, type Plugin } from 'vue'
 
 import App from './App.vue'
-import '@/assets/styles/index.scss'
+import '@/assets/styles/index.css'
 
 const app = createApp(App)
 

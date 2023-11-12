@@ -17,7 +17,7 @@ const title = computed(() => {
 useTitle(title)
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .v-main {
   padding-top: 0;
   margin-top: var(--v-layout-top);

@@ -49,7 +49,10 @@ nextTick(() => {
     <v-spacer />
     <template #append>
       <v-list-item class="drawer-footer px-0 d-flex flex-column justify-center">
-        <div class="text-caption pt-6 pb-1 pt-md-0 text-center">
+        <div
+          class="text-caption pt-6 pb-1 pt-md-0 text-center"
+          style="white-space: nowrap"
+        >
           &copy; Copyright 2023
           <a
             href="https://github.com/kingyue737"
@@ -70,7 +73,7 @@ nextTick(() => {
   </v-navigation-drawer>
 </template>
 
-<style lang="scss">
+<style>
 .v-navigation-drawer {
   transition-property: box-shadow, transform, visibility, width, height, left,
     right, top, bottom, border-radius !important;
@@ -109,12 +112,6 @@ nextTick(() => {
   .drawer-footer {
     transition: all 0.2s;
     min-height: 30px;
-    div {
-      white-space: nowrap;
-    }
-    &::after {
-      min-height: 0;
-    }
   }
   .drawer-header-icon {
     opacity: 1 !important;
@@ -123,7 +120,6 @@ nextTick(() => {
     transition: all 0.2s;
   }
   .v-list-group {
-    // --list-indent-size: 10px;
     --prepend-width: 10px;
   }
   .v-list-item {

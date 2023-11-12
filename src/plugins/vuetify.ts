@@ -1,17 +1,9 @@
 import 'vuetify/styles'
-import type { FunctionalComponent } from 'vue'
 import { createVuetify, type IconSet, type IconProps } from 'vuetify'
-import { VDataTable } from 'vuetify/labs/VDataTable'
 import { en, zhHans } from 'vuetify/locale'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 import { useDark } from '@vueuse/core'
 import { md3 } from 'vuetify/blueprints'
-
-type UnwrapReadonlyArrayType<A> = A extends Readonly<Array<infer I>>
-  ? UnwrapReadonlyArrayType<I>
-  : A
-type DT = InstanceType<typeof VDataTable>
-export type DataTableHeader = UnwrapReadonlyArrayType<DT['headers']>
 
 function filename(path: string) {
   return path
@@ -22,16 +14,16 @@ function filename(path: string) {
 
 const svgIcons = Object.fromEntries(
   Object.entries(
-    import.meta.glob<FunctionalComponent>('@/assets/icons/*.svg', {
+    import.meta.glob('@/assets/icons/*.svg', {
       eager: true,
-      import: 'default',
-      as: 'component',
+      as: 'raw',
     }),
   ).map(([k, v]) => [filename(k), v]),
 )
+
 const custom: IconSet = {
   component: (props: IconProps) =>
-    h(props.tag, [h(svgIcons[props.icon as string])]),
+    h(props.tag, { innerHTML: svgIcons[props.icon as string] }),
 }
 
 const theme = {
@@ -43,7 +35,6 @@ const theme = {
 
 export default createVuetify({
   blueprint: md3,
-  components: { VDataTable },
   locale: {
     locale: 'zhHans',
     fallback: 'en',
