@@ -118,6 +118,7 @@ nextTick(() => {
     height: 1.2em !important;
     width: 1.2em !important;
     transition: all 0.2s;
+    margin-right: -10px;
   }
   .v-list-group {
     --prepend-width: 10px;
