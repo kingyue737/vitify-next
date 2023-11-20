@@ -22,7 +22,7 @@ const isDark = useDark({
     theme.global.name.value = dark ? 'dark' : 'light'
   },
 })
-const toggleDark = useToggle(isDark)
+const toggleDark = useToggle<true, false | null>(isDark)
 </script>
 
 <template>
