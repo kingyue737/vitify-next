@@ -17,7 +17,7 @@
     "echarts": "^5.4.3",
     "pinia": "^2.1.7",
     "vue": "^3.3.11",
-    "vue-echarts": "^6.6.4",
+    "vue-echarts": "6.6.1",
     "vue-router": "^4.2.5",
     "vuetify": "^3.4.7"
   },
