@@ -1,4 +1,4 @@
-import Homepage from '../homepage.vue'
+import Homepage from '@/pages/homepage.vue'
 import { fireEvent } from '@testing-library/vue'
 import { renderWithVuetify } from '@/../test/helpers'
 
