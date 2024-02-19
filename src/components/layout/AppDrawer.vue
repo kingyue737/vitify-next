@@ -36,7 +36,7 @@ nextTick(() => {
           </template>
           <v-list-item-title
             class="text-h5 font-weight-bold"
-            style="line-height: 2rem"
+            style="line-height: 2rem; text-overflow: clip;"
           >
             Vitify <span class="text-primary">Admin</span>
           </v-list-item-title>
