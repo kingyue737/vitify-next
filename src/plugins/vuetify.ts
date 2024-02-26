@@ -5,7 +5,9 @@ import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 import { useDark } from '@vueuse/core'
 import { md3 } from 'vuetify/blueprints'
 import type { VDataTable } from 'vuetify/lib/components/index.mjs'
-export type DataTableHeaders = InstanceType<typeof VDataTable>['headers']
+export type DataTableHeaders = InstanceType<
+  typeof VDataTable
+>['$props']['headers']
 
 function filename(path: string) {
   return path
