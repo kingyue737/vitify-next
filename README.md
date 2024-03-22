@@ -93,7 +93,7 @@ Currently I want to keep this template as light as possible, see [Vitify Admin](
 ### Coding Style
 
 - [Prettier](https://prettier.io/), single quotes, no semi
-- [ESLint](https://eslint.org/) with adapted [@vue/eslint-config-typescript](https://github.com/vuejs/eslint-config-typescript)
+- [ESLint flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new) with adapted [@nuxt/eslint](https://github.com/nuxt/eslint), future-proof
 
 ### Dev tools
 

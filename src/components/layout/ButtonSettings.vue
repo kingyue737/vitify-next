@@ -38,8 +38,7 @@ const menuShow = ref(false)
             icon="mdi-palette-outline"
             v-bind="mergeProps(menu, tooltip)"
             :rounded="0"
-          >
-          </v-btn>
+          />
         </template>
         <span>Theme Palette</span>
       </v-tooltip>
@@ -55,7 +54,7 @@ const menuShow = ref(false)
           mode="rgb"
           :modes="['rgb', 'hex', 'hsl']"
           :swatches="colors"
-        ></v-color-picker>
+        />
         <v-btn-toggle v-model="store" mandatory class="mt-2" rounded="lg">
           <v-btn prepend-icon="mdi-white-balance-sunny" value="light"
             >Light</v-btn

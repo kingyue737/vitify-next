@@ -35,10 +35,10 @@ defineExpose({ open })
         <span>{{ message }}</span>
       </v-card-text>
       <v-card-actions>
-        <v-spacer></v-spacer>
+        <v-spacer />
         <v-btn color="primary darken-1" @click="cancel">Cancel</v-btn>
         <v-btn color="primary darken-1" @click="confirm">Confirm</v-btn>
-        <v-spacer></v-spacer>
+        <v-spacer />
       </v-card-actions>
     </v-card>
   </v-dialog>

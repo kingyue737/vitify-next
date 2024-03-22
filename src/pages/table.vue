@@ -151,7 +151,7 @@ const desserts = ref([
                 flat
                 variant="solo"
                 style="width: 250px"
-              ></v-text-field>
+              />
             </teleport>
           </client-only>
           <v-data-table
