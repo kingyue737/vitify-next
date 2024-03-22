@@ -30,8 +30,7 @@ function toggleAll() {
         :rounded="0"
         v-bind="props"
         @click="toggleAll"
-      >
-      </v-btn>
+      />
     </template>
   </v-tooltip>
   <teleport to="#app">
@@ -45,8 +44,7 @@ function toggleAll() {
         <v-toolbar-title
           class="font-weight-light text-body-1"
           :text="notifications.length ? 'Notification' : 'No New Notifications'"
-        >
-        </v-toolbar-title>
+        />
         <v-tooltip location="top" text="Clear All Notifications">
           <template #activator="{ props }">
             <v-btn
