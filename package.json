@@ -8,7 +8,7 @@
     "preview": "vite preview --config vite.config.preview.ts",
     "test:unit": "vitest",
     "test:e2e": "playwright test",
-    "typecheck": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
+    "typecheck": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
   },

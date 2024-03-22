@@ -22,7 +22,7 @@ const startTimeout = () => {
     return
   }
 
-  activeTimeout = setTimeout(() => {
+  activeTimeout = window.setTimeout(() => {
     isActive.value = false
   }, timeout.value)
 }
