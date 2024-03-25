@@ -33,7 +33,7 @@ Lightweight Vue 3 version of <a href="https://github.com/kingyue737/vitify-admin
 
 ## Features
 
-- ⚡️ [Vite 4](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
+- ⚡️ [Vite](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
 
 - 🗂️ [File based routing](./src/pages)
 
@@ -83,12 +83,12 @@ Currently I want to keep this template as light as possible, see [Vitify Admin](
 
 - [Vue Router](https://github.com/vuejs/router)
   - [`unplugin-vue-router`](https://github.com/posva/unplugin-vue-router) - Next-gen file based typed routing for vue router
-  - [`vite-plugin-vue-layouts`](https://github.com/JohnCampionJr/vite-plugin-vue-layouts) - Layouts for pages
+  - [`vite-plugin-vue-meta-layouts`](https://github.com/dishait/vite-plugin-vue-meta-layouts) - Layouts for pages
 - [Pinia](https://pinia.esm.dev) - Intuitive, type safe, light and flexible Store for Vue using the Composition API
 - [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components) - Auto import Vuetify 2 components
 - [`unplugin-auto-import`](https://github.com/antfu/unplugin-auto-import) - Directly use Vue Composition API and others without importing
 - [VueUse](https://github.com/antfu/vueuse) - Collection of useful composition APIs
-- [`vite-svg-loader`](https://github.com/jpkleemans/vite-svg-loader) - SVG files are loaded as Vue components, optimised via [SVGO](https://github.com/svg/svgo) and auto registered as Vuetify `v-icon`s
+- [`rollup-plugin-regexp`](https://github.com/kingyue737/rollup-plugin-regexp) - auto replace [`@mdi/font`](https://github.com/Templarian/MaterialDesign-Webfont) with [`@mdi/js`](https://github.com/Templarian/MaterialDesign-JS) in `<VIcon>`, reduce bundle size
 
 ### Coding Style
 
