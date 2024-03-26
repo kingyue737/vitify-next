@@ -1,13 +1,4 @@
 {
-  "i18n-ally.localesPaths": ["src/locales"],
-  "i18n-ally.keystyle": "nested",
-  "i18n-ally.enabledFrameworks": ["vue-sfc", "vue"],
-  "json.schemas": [
-    {
-      "fileMatch": ["/.prettierrc"],
-      "url": "https://json.schemastore.org/prettierrc.json"
-    }
-  ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "eslint.experimental.useFlatConfig": true
 }
