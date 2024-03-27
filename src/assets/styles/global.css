@@ -36,7 +36,7 @@ html {
   border-radius: 0 !important;
 }
 
-.v-field--active {
+.v-field--focused {
   .v-icon {
     color: rgb(var(--v-theme-primary));
   }
