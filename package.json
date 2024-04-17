@@ -1,7 +1,7 @@
 {
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@8.15.4",
+  "packageManager": "pnpm@9.0.1",
   "scripts": {
     "dev": "vite --open --host",
     "build": "vite build",
@@ -16,10 +16,10 @@
     "@vueuse/core": "^10.9.0",
     "echarts": "^5.5.0",
     "pinia": "^2.1.7",
-    "vue": "^3.4.22",
+    "vue": "^3.4.23",
     "vue-echarts": "^6.6.9",
     "vue-router": "^4.3.0",
-    "vuetify": "^3.5.15"
+    "vuetify": "^3.5.16"
   },
   "devDependencies": {
     "@mdi/js": "^7.4.47",
@@ -42,7 +42,7 @@
     "unplugin-auto-import": "^0.17.5",
     "unplugin-vue-components": "^0.26.0",
     "unplugin-vue-router": "^0.8.6",
-    "vite": "^5.2.8",
+    "vite": "^5.2.9",
     "vite-plugin-vue-meta-layouts": "^0.4.2",
     "vite-plugin-vuetify": "^2.0.3",
     "vitest": "^1.5.0",
