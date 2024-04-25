@@ -38,7 +38,10 @@ export default defineConfig({
       sourcemap: false,
     }),
     VueRouter({ importMode: 'sync', dts: './src/typed-router.d.ts' }),
-    Vue({ template: { transformAssetUrls } }),
+    Vue({
+      template: { transformAssetUrls },
+      script: { propsDestructure: true },
+    }),
     Layouts(),
     Vuetify({ autoImport: true }),
     Components({ dts: './src/components.d.ts', types: [] }),

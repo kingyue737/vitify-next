@@ -16,13 +16,16 @@ const drawer = computed({
 const rail = computed(() => !drawerStored.value && !mobile.value)
 routes.sort((a, b) => (a.meta?.drawerIndex ?? 99) - (b.meta?.drawerIndex ?? 98))
 
-nextTick(() => {
-  drawerStored.value = lgAndUp.value && width.value !== 1280
-})
+drawerStored.value = lgAndUp.value && width.value !== 1280
 </script>
 
 <template>
-  <v-navigation-drawer v-model="drawer" :expand-on-hover="rail" :rail="rail">
+  <v-navigation-drawer
+    v-model="drawer"
+    :expand-on-hover="rail"
+    :rail="rail"
+    floating
+  >
     <template #prepend>
       <v-list>
         <v-list-item class="pa-1">
@@ -75,7 +78,6 @@ nextTick(() => {
   transition-property: box-shadow, transform, visibility, width, height, left,
     right, top, bottom, border-radius !important;
   overflow: hidden;
-  border-width: 0px !important;
   &.v-navigation-drawer--rail {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
