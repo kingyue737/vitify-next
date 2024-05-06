@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import { VEmptyState } from 'vuetify/labs/VEmptyState'
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <v-empty-state
