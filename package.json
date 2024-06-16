@@ -1,7 +1,7 @@
 {
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@9.2.0",
+  "packageManager": "pnpm@9.3.0",
   "scripts": {
     "dev": "vite --open --host",
     "build": "vite build",
@@ -13,13 +13,13 @@
     "format": "prettier . --write"
   },
   "dependencies": {
-    "@vueuse/core": "^10.10.0",
+    "@vueuse/core": "^10.11.0",
     "echarts": "^5.5.0",
     "pinia": "^2.1.7",
-    "vue": "^3.4.27",
+    "vue": "^3.4.29",
     "vue-echarts": "^6.7.3",
     "vue-router": "^4.3.3",
-    "vuetify": "^3.6.8"
+    "vuetify": "^3.6.9"
   },
   "devDependencies": {
     "@mdi/js": "^7.4.47",
@@ -33,16 +33,16 @@
     "@vitejs/plugin-vue": "^5.0.5",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.5.1",
-    "eslint": "^9.4.0",
+    "eslint": "^9.5.0",
     "eslint-plugin-playwright": "^1.6.2",
     "jsdom": "^24.1.0",
-    "prettier": "^3.3.1",
+    "prettier": "^3.3.2",
     "rollup-plugin-regexp": "^5.0.1",
     "typescript": "^5.4.5",
     "unplugin-auto-import": "^0.17.6",
     "unplugin-vue-components": "^0.27.0",
     "unplugin-vue-router": "^0.9.1",
-    "vite": "^5.2.13",
+    "vite": "^5.3.1",
     "vite-plugin-vue-meta-layouts": "^0.4.3",
     "vite-plugin-vuetify": "^2.0.3",
     "vitest": "^1.6.0",
