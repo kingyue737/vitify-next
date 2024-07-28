@@ -40,7 +40,6 @@ export default defineConfig({
     VueRouter({ importMode: 'sync', dts: './src/typed-router.d.ts' }),
     Vue({
       template: { transformAssetUrls },
-      script: { propsDestructure: true },
     }),
     Layouts(),
     Vuetify({ autoImport: true }),
