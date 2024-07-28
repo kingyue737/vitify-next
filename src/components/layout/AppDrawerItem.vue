@@ -14,12 +14,16 @@ const visibleChildrenNum = computed(() => visibleChildren.value?.length || 0)
 const isItem = computed(() => !item.children || visibleChildrenNum.value <= 1)
 const title = toRef(() => item.meta?.title)
 const icon = toRef(() => item.meta?.icon)
+// @ts-expect-error unknown type miss match
+const to = computed<RouteRecordRaw>(() => ({
+  name: item.name || visibleChildren.value?.[0].name,
+}))
 </script>
 
 <template>
   <v-list-item
     v-if="isItem && icon"
-    :to="{ name: item.name || visibleChildren?.[0].name }"
+    :to="to"
     :prepend-icon="icon"
     active-class="text-primary"
     :title="title"
