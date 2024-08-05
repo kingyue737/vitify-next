@@ -2,7 +2,6 @@ import 'vuetify/styles'
 import { createVuetify, type IconSet, type IconProps } from 'vuetify'
 import { en, zhHans } from 'vuetify/locale'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
-import { useDark } from '@vueuse/core'
 import { md3 } from 'vuetify/blueprints'
 import type { VDataTable } from 'vuetify/lib/components/index.mjs'
 export type DataTableHeaders = InstanceType<
@@ -66,7 +65,6 @@ export default createVuetify({
     VChip: { rounded: 'lg' },
   },
   theme: {
-    defaultTheme: useDark().value ? 'dark' : 'light',
     themes: {
       light: {
         colors: theme,
