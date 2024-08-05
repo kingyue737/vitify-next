@@ -1,7 +1,7 @@
 {
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@9.3.0",
+  "packageManager": "pnpm@9.6.0",
   "scripts": {
     "dev": "vite --open --host",
     "build": "vite build",
@@ -51,9 +51,6 @@
   "pnpm": {
     "peerDependencyRules": {
       "allowedVersions": {
-        "@typescript-eslint/eslint-plugin>eslint": "^9.0.0",
-        "@typescript-eslint/parser>eslint": "^9.0.0",
-        "@typescript-eslint/type-utils>eslint": "^9.0.0",
         "@typescript-eslint/utils>eslint": "^9.0.0"
       }
     }
