@@ -1,6 +1,5 @@
 import 'vuetify/styles'
 import { createVuetify, type IconSet, type IconProps } from 'vuetify'
-import { en, zhHans } from 'vuetify/locale'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 import { md3 } from 'vuetify/blueprints'
 import type { VDataTable } from 'vuetify/lib/components/index.mjs'
@@ -36,11 +35,6 @@ const theme = {
 
 export default createVuetify({
   blueprint: md3,
-  locale: {
-    locale: 'zhHans',
-    fallback: 'en',
-    messages: { zhHans, en },
-  },
   defaults: {
     VSwitch: {
       color: 'primary',
