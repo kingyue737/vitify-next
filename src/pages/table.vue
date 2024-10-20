@@ -11,7 +11,7 @@ definePage({
 })
 
 const search = ref('')
-const dialogDelete = ref<InstanceType<typeof DialogConfirm> | null>(null)
+const dialogDelete = useTemplateRef('dialogDelete')
 function showDialogDelete(name: string) {
   dialogDelete.value
     ?.open('Are you sure you want to delete this dessert?')
