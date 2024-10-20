@@ -1,7 +1,7 @@
 {
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@9.11.0",
+  "packageManager": "pnpm@9.12.1",
   "scripts": {
     "dev": "vite --open --host",
     "build": "vite build",
@@ -19,7 +19,7 @@
     "vue": "^3.5.12",
     "vue-echarts": "^7.0.3",
     "vue-router": "^4.4.5",
-    "vuetify": "^3.7.2"
+    "vuetify": "^3.7.3"
   },
   "devDependencies": {
     "@mdi/js": "^7.4.47",
@@ -29,12 +29,12 @@
     "@testing-library/vue": "^8.1.0",
     "@tsconfig/node20": "^20.1.4",
     "@types/jsdom": "^21.1.7",
-    "@types/node": "^20.16.12",
+    "@types/node": "^20.16.13",
     "@vitejs/plugin-vue": "^5.1.4",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.5.1",
-    "eslint": "^9.12.0",
-    "eslint-plugin-playwright": "^1.7.0",
+    "eslint": "^9.13.0",
+    "eslint-plugin-playwright": "^1.8.0",
     "jsdom": "^25.0.1",
     "prettier": "^3.3.3",
     "rollup-plugin-regexp": "^5.0.1",
