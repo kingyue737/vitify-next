@@ -13,6 +13,6 @@
     "module": "ESNext",
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
     "moduleResolution": "Bundler",
-    "types": ["node", "vitest"]
+    "types": ["node"]
   }
 }
