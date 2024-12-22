@@ -13,17 +13,17 @@
     "format": "prettier . --write"
   },
   "dependencies": {
-    "@vueuse/core": "^12.0.0",
+    "@vueuse/core": "^12.1.0",
     "echarts": "^5.5.1",
     "pinia": "^2.3.0",
     "vue": "^3.5.13",
     "vue-echarts": "^7.0.3",
     "vue-router": "^4.5.0",
-    "vuetify": "^3.7.5"
+    "vuetify": "^3.7.6"
   },
   "devDependencies": {
     "@mdi/js": "^7.4.47",
-    "@nuxt/eslint-config": "^0.7.3",
+    "@nuxt/eslint-config": "^0.7.4",
     "@pinia/testing": "^0.1.7",
     "@playwright/test": "^1.49.1",
     "@testing-library/vue": "^8.1.0",
@@ -40,9 +40,9 @@
     "rollup-plugin-regexp": "^5.0.1",
     "typescript": "~5.6.3",
     "unplugin-auto-import": "^0.19.0",
-    "unplugin-vue-components": "^0.27.5",
+    "unplugin-vue-components": "^0.28.0",
     "unplugin-vue-router": "^0.10.9",
-    "vite": "^6.0.3",
+    "vite": "^6.0.5",
     "vite-plugin-vue-meta-layouts": "^0.5.1",
     "vite-plugin-vuetify": "^2.0.4",
     "vitest": "^2.1.8",
