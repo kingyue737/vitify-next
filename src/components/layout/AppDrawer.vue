@@ -75,8 +75,9 @@ drawerStored.value = lgAndUp.value && width.value !== 1280
 
 <style>
 .v-navigation-drawer {
-  transition-property: box-shadow, transform, visibility, width, height, left,
-    right, top, bottom, border-radius !important;
+  transition-property:
+    box-shadow, transform, visibility, width, height, left, right, top, bottom,
+    border-radius !important;
   overflow: hidden;
   &.v-navigation-drawer--rail {
     border-top-right-radius: 0px;
