@@ -36,12 +36,6 @@ html {
   border-radius: 0 !important;
 }
 
-.v-field--focused {
-  .v-icon {
-    color: rgb(var(--v-theme-primary));
-  }
-}
-
 .v-icon svg {
   fill: currentColor;
   width: 100%;
