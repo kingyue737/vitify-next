@@ -4,7 +4,7 @@ import type { Notification } from '@/stores/notification'
 
 const props = withDefaults(
   defineProps<{
-    timeout: number
+    timeout?: number
     notification: Notification
   }>(),
   { timeout: 5000 },
