@@ -9,5 +9,5 @@ definePage({
 })
 </script>
 <template>
-  <RouterWrapper />
+  <router-view />
 </template>

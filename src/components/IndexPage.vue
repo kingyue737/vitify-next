@@ -1,20 +1,24 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const items = computed(() =>
-  route.matched
-    .filter((v) => v.path === route.path)[0]
-    .children[0].children?.filter((c) => c.path)
+const items = computed(() => {
+  const matched = route.matched
+    .filter((v) => v.path === route.path)
+    .find((v) => !v.meta.isLayout)
+  const children = matched?.children
+
+  return children
+    ?.filter((c) => c.path)
     .toSorted(
       (a, b) => (a.meta?.drawerIndex ?? 99) - (b.meta?.drawerIndex ?? 98),
     )
     .map((c) => ({
       title: c.meta?.title,
-      to: c.name ? c : `${route.path}/${c.path}`,
+      to: c.name as any,
       prependIcon: c.meta?.icon,
       subtitle: c.meta?.subtitle,
-    })),
-)
+    }))
+})
 </script>
 
 <template>
