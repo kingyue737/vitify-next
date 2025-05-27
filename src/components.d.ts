@@ -20,7 +20,7 @@ declare module 'vue' {
     ChartPie: typeof import('./components/demo-charts/ChartPie.vue')['default']
     ChartRadar: typeof import('./components/demo-charts/ChartRadar.vue')['default']
     DialogConfirm: typeof import('./components/DialogConfirm.vue')['default']
-    RouterWrapper: typeof import('./components/layout/RouterWrapper.vue')['default']
+    IndexPage: typeof import('./components/IndexPage.vue')['default']
     StatsCard: typeof import('./components/StatsCard.vue')['default']
   }
 }
