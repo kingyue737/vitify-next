@@ -56,11 +56,24 @@ const menuShow = ref(false)
           :swatches="colors"
         />
         <v-btn-toggle v-model="store" mandatory class="mt-2" rounded="lg">
-          <v-btn prepend-icon="mdi-white-balance-sunny" value="light"
-            >Light</v-btn
-          >
-          <v-btn prepend-icon="mdi-weather-night" value="dark">Dark</v-btn>
-          <v-btn prepend-icon="mdi-laptop" value="auto">System</v-btn>
+          <v-btn
+            prepend-icon="mdi-white-balance-sunny"
+            value="light"
+            size="small"
+            text="Light"
+          />
+          <v-btn
+            prepend-icon="mdi-weather-night"
+            value="dark"
+            size="small"
+            text="Dark"
+          />
+          <v-btn
+            prepend-icon="mdi-laptop"
+            value="auto"
+            text="System"
+            size="small"
+          />
         </v-btn-toggle>
       </v-card-text>
     </v-card>

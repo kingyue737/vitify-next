@@ -1,4 +1,5 @@
-import { createApp, type Plugin } from 'vue'
+import { createApp } from 'vue'
+import type { Plugin } from 'vue'
 
 import App from './App.vue'
 import '@/assets/styles/index.css'

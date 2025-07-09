@@ -14,7 +14,7 @@ const breadcrumbs = computed(() => {
 })
 const isDark = useDark({
   onChanged(dark: boolean) {
-    theme.global.name.value = dark ? 'dark' : 'light'
+    theme.change(dark ? 'dark' : 'light')
   },
 })
 const toggleDark = useToggle<true, false | null>(isDark)

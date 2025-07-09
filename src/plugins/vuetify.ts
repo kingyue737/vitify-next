@@ -1,5 +1,6 @@
 import 'vuetify/styles'
-import { createVuetify, type IconSet, type IconProps } from 'vuetify'
+import { createVuetify } from 'vuetify'
+import type { IconSet, IconProps } from 'vuetify'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 import { md3 } from 'vuetify/blueprints'
 
