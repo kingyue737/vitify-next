@@ -17,7 +17,7 @@ jobs:
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: 22.x
           cache: pnpm
 
       - name: Install
@@ -33,7 +33,7 @@ jobs:
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: 22.x
           cache: pnpm
 
       - name: Install
@@ -49,7 +49,8 @@ jobs:
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22.x
+          cache: pnpm
       - run: pnpm install
       - run: pnpm run test:unit
 
@@ -61,7 +62,8 @@ jobs:
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22.x
+          cache: pnpm
       - name: Install dependencies
         run: pnpm install
       - name: Install Playwright Browsers

@@ -4,7 +4,6 @@
     "ms-playwright.playwright",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "editorconfig.editorconfig",
-    "lukas-tr.materialdesignicons-intellisense"
+    "editorconfig.editorconfig"
   ]
 }
