@@ -13,7 +13,8 @@ const option: ECOption = {
     left: '2%',
     right: '2%',
     bottom: '3%',
-    containLabel: true,
+    outerBoundsMode: 'same',
+    outerBoundsContain: 'axisLabel',
   },
   xAxis: [
     {
