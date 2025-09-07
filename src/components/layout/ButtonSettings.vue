@@ -6,12 +6,12 @@ const theme = useTheme()
 const { store } = useColorMode()
 const color = computed({
   get() {
-    return theme.themes.value.light.colors.primary
+    return theme.themes.value.light!.colors.primary
   },
   set(val: string) {
     localStorage.setItem('theme-primary', val)
-    theme.themes.value.light.colors.primary = val
-    theme.themes.value.dark.colors.primary = val
+    theme.themes.value.light!.colors.primary = val
+    theme.themes.value.dark!.colors.primary = val
   },
 })
 const colors = [
