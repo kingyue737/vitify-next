@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { RouteRecordRaw } from 'vue-router/auto'
+import type { RouteRecordRaw } from 'vue-router'
 
 const { level = 0, item } = defineProps<{
   level?: number
@@ -14,7 +14,7 @@ const visibleChildrenNum = computed(() => visibleChildren.value?.length || 0)
 const isItem = computed(() => !item.children || visibleChildrenNum.value <= 1)
 const title = toRef(() => item.meta?.title)
 const icon = toRef(() => item.meta?.icon)
-// @ts-expect-error unknown type miss match
+// @ts-expect-error unknown type mismatch
 const to = computed<RouteRecordRaw>(() => ({
   name: item.name || visibleChildren.value?.[0]?.name,
 }))

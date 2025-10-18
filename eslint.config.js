@@ -3,7 +3,6 @@ import {
   defineFlatConfigs,
 } from '@nuxt/eslint-config/flat'
 import playwright from 'eslint-plugin-playwright'
-import {} from 'eslint-flat-config-utils'
 
 export default defineFlatConfigs(
   createConfigForNuxt({

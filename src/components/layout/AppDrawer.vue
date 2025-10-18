@@ -14,7 +14,9 @@ const drawer = computed({
   },
 })
 const rail = computed(() => !drawerStored.value && !mobile.value)
-routes.sort((a, b) => (a.meta?.drawerIndex ?? 99) - (b.meta?.drawerIndex ?? 98))
+const sortedRoutes = routes.toSorted(
+  (a, b) => (a.meta?.drawerIndex ?? 99) - (b.meta?.drawerIndex ?? 98),
+)
 
 drawerStored.value = lgAndUp.value && width.value !== 1280
 </script>
@@ -47,7 +49,11 @@ drawerStored.value = lgAndUp.value && width.value !== 1280
       </v-list>
     </template>
     <v-list nav density="compact">
-      <AppDrawerItem v-for="route in routes" :key="route.name" :item="route" />
+      <AppDrawerItem
+        v-for="route in sortedRoutes"
+        :key="route.name"
+        :item="route"
+      />
     </v-list>
     <v-spacer />
     <template #append>
