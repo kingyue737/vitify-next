@@ -4,9 +4,9 @@ import Vue from '@vitejs/plugin-vue'
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import VueRouter from 'unplugin-vue-router/vite'
+import VueRouter from 'vue-router/vite'
+import { VueRouterAutoImports } from 'vue-router/unplugin'
 import Layouts from 'vite-plugin-vue-meta-layouts'
-import { VueRouterAutoImports } from 'unplugin-vue-router'
 import regexpPlugin from 'rollup-plugin-regexp'
 import * as mdicons from '@mdi/js'
 
@@ -37,7 +37,7 @@ export default defineConfig({
       },
       sourcemap: false,
     }),
-    VueRouter({ importMode: 'sync', dts: './src/typed-router.d.ts' }),
+    VueRouter({ importMode: 'sync', dts: './src/route-map.d.ts' }),
     Vue({
       template: { transformAssetUrls },
       features: { propsDestructure: true },

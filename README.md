@@ -82,7 +82,6 @@ Currently I want to keep this template as light as possible, see [Vitify Admin](
 ### Plugins
 
 - [Vue Router](https://github.com/vuejs/router)
-  - [`unplugin-vue-router`](https://github.com/posva/unplugin-vue-router) - Next-gen file based typed routing for vue router
   - [`vite-plugin-vue-meta-layouts`](https://github.com/dishait/vite-plugin-vue-meta-layouts) - Layouts for pages
 - [Pinia](https://pinia.esm.dev) - Intuitive, type safe, light and flexible Store for Vue using the Composition API
 - [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components) - Auto import Vuetify 2 components
