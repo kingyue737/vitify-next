@@ -42,7 +42,7 @@ function toggleAll() {
     >
       <v-toolbar flat density="compact">
         <v-toolbar-title
-          class="font-weight-light text-body-1"
+          class="font-weight-light text-body-large"
           :text="notifications.length ? 'Notification' : 'No New Notifications'"
         />
         <v-tooltip location="top" text="Clear All Notifications">

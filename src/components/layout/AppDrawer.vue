@@ -40,7 +40,7 @@ drawerStored.value = lgAndUp.value && width.value !== 1280
             />
           </template>
           <v-list-item-title
-            class="text-h5 font-weight-bold"
+            class="text-display-small font-weight-bold"
             style="line-height: 2rem; text-overflow: clip"
           >
             Vitify <span class="text-primary">Admin</span>
@@ -58,8 +58,8 @@ drawerStored.value = lgAndUp.value && width.value !== 1280
     <v-spacer />
     <template #append>
       <v-list-item class="drawer-footer px-0 d-flex flex-column justify-center">
-        <div class="text-caption pt-6 pb-1 pt-md-0 text-center text-no-wrap">
-          &copy; Copyright 2023
+        <div class="text-body-small pt-6 pb-1 pt-md-0 text-center text-no-wrap">
+          &copy; Copyright 2026
           <a
             href="https://github.com/kingyue737"
             class="font-weight-bold text-primary"
@@ -83,7 +83,7 @@ drawerStored.value = lgAndUp.value && width.value !== 1280
 .v-navigation-drawer {
   transition-property:
     box-shadow, transform, visibility, width, height, left, right, top, bottom,
-    border-radius !important;
+    border-radius;
   overflow: hidden;
   &.v-navigation-drawer--rail {
     border-top-right-radius: 0px;
@@ -100,11 +100,11 @@ drawerStored.value = lgAndUp.value && width.value !== 1280
         transform: translateX(-160px);
       }
       .drawer-header-icon {
-        height: 1em !important;
-        width: 1em !important;
+        height: 1em;
+        width: 1em;
       }
       .v-list-group__items .v-list-item {
-        padding-inline-start: 8px !important;
+        padding-inline-start: 8px;
       }
     }
   }
@@ -119,9 +119,9 @@ drawerStored.value = lgAndUp.value && width.value !== 1280
     min-height: 30px;
   }
   .drawer-header-icon {
-    opacity: 1 !important;
-    height: 1.2em !important;
-    width: 1.2em !important;
+    opacity: 1;
+    height: 1.2em;
+    width: 1.2em;
     transition: all 0.2s;
     margin-right: -4px;
   }
