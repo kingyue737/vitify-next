@@ -56,6 +56,6 @@ const toggleDark = useToggle<true, false | null>(isDark)
   opacity: 0.5;
 }
 :deep(.v-switch__thumb .v-icon) {
-  --v-icon-size-multiplier: 1.2 !important;
+  --v-icon-size-multiplier: 1.2;
 }
 </style>

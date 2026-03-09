@@ -34,19 +34,18 @@ withDefaults(
         :class="`text-${color}`"
         v-text="title"
       />
-      <h3
+      <span
         class="font-weight-regular d-inline-block ml-2"
-        style="font-size: 18px"
       >
         {{ value != null ? formatter(value) : '' }}
         <small v-if="unit">{{ unit }}</small>
-      </h3>
+    </span>
       <v-divider />
     </div>
     <div class="v-alert__border" :class="`text-${color}`" />
     <div
       v-if="$slots.footer"
-      class="text-grey text-right stats-footer text-caption"
+      class="text-grey text-right stats-footer text-body-small"
     >
       <slot name="footer" />
     </div>
@@ -64,10 +63,6 @@ withDefaults(
       backdrop-filter: blur(3px);
     }
   }
-  .caption {
-    font-size: 12px;
-    letter-spacing: 0;
-  }
   .stats-icon {
     position: absolute;
     opacity: 0.3;
@@ -75,8 +70,8 @@ withDefaults(
   .stats-footer {
     :deep(span) {
       display: inline-block;
-      font-size: 12px !important;
-      letter-spacing: 0 !important;
+      font-size: 12px;
+      letter-spacing: 0;
     }
   }
 }
