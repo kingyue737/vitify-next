@@ -8,7 +8,7 @@
     <img src="https://img.shields.io/badge/vue-3-brightgreen.svg" alt="vue">
   </a>
   <a href="https://github.com/vuetifyjs/vuetify">
-    <img src="https://img.shields.io/badge/vuetify-3-blue.svg" alt="vuetify">
+    <img src="https://img.shields.io/badge/vuetify-4-blue.svg" alt="vuetify">
   </a>
   <a href="https://github.com/kingyue737/vitify-admin/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="license">
@@ -26,7 +26,7 @@ Lightweight Vue 3 version of <a href="https://github.com/kingyue737/vitify-admin
 
 ## Variants
 
-- [vitify-nuxt](https://github.com/kingyue737/vitify-nuxt) - Vuetify 3 with Nuxt 3, the best DX 🔥🔥🔥
+- [vitify-nuxt](https://github.com/kingyue737/vitify-nuxt) - Vuetify 4 with Nuxt 4, the best DX 🔥🔥🔥
 
 - [vitify-electron](https://github.com/kingyue737/vitify-electron) - Vuetify 3 with Electron
 - [vitify-admin](https://github.com/kingyue737/vitify-admin) - Vuetify 2 but with full Typescript support and Vite
@@ -77,7 +77,7 @@ Currently I want to keep this template as light as possible, see [Vitify Admin](
 
 ### UI Frameworks
 
-- [Vuetify 3](https://vuetifyjs.com/) - Material Design Framework
+- [Vuetify](https://vuetifyjs.com/) - Material Design Framework
 
 ### Plugins
 
