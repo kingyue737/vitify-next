@@ -40,7 +40,7 @@ drawerStored.value = lgAndUp.value && width.value !== 1280
             />
           </template>
           <v-list-item-title
-            class="text-display-small font-weight-bold"
+            class="text-headline-small font-weight-bold"
             style="line-height: 2rem; text-overflow: clip"
           >
             Vitify <span class="text-primary">Admin</span>
