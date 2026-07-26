@@ -1,0 +1,5 @@
+autoInstallPeers: true
+shamefullyHoist: true
+minimumReleaseAge: 60
+allowBuilds:
+  unrs-resolver: true

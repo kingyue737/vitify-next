@@ -14,10 +14,15 @@ import type {
   ParamValueZeroOrMore,
   ParamValueZeroOrOne,
 } from 'vue-router'
+import type {
+  _ExtractParamParserType,
+} from 'vue-router/experimental'
 
 declare module 'vue-router' {
   interface TypesConfig {
-    ParamParsers: never
+    _ParamParsers: {}
+    RouteNamedMap: import('vue-router/auto-routes').RouteNamedMap
+    _RouteFileInfoMap: import('vue-router/auto-routes')._RouteFileInfoMap
   }
 }
 
@@ -135,23 +140,31 @@ declare module 'vue-router/auto-routes' {
         | '/'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'src/pages/[...all].vue': {
       routes:
         | '/[...all]'
       views:
         | never
+      pathParamNames:
+        | 'all'
     }
     'src/pages/dashboard.vue': {
       routes:
         | '/dashboard'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'src/pages/homepage.vue': {
       routes:
         | '/homepage'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'src/pages/nested.vue': {
@@ -165,17 +178,23 @@ declare module 'vue-router/auto-routes' {
         | '/nested/menu2/menu2-2'
       views:
         | 'default'
+      pathParamNames:
+        | never
     }
     'src/pages/nested/index.vue': {
       routes:
         | '/nested/'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'src/pages/nested/menu1.vue': {
       routes:
         | '/nested/menu1'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'src/pages/nested/menu2.vue': {
@@ -186,11 +205,15 @@ declare module 'vue-router/auto-routes' {
         | '/nested/menu2/menu2-2'
       views:
         | 'default'
+      pathParamNames:
+        | never
     }
     'src/pages/nested/menu2/index.vue': {
       routes:
         | '/nested/menu2/'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'src/pages/nested/menu2/menu2-1.vue': {
@@ -198,17 +221,23 @@ declare module 'vue-router/auto-routes' {
         | '/nested/menu2/menu2-1'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'src/pages/nested/menu2/menu2-2.vue': {
       routes:
         | '/nested/menu2/menu2-2'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'src/pages/table.vue': {
       routes:
         | '/table'
       views:
+        | never
+      pathParamNames:
         | never
     }
   }

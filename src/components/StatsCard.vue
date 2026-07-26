@@ -34,12 +34,10 @@ withDefaults(
         :class="`text-${color}`"
         v-text="title"
       />
-      <span
-        class="font-weight-regular d-inline-block ml-2"
-      >
+      <span class="font-weight-regular d-inline-block ml-2">
         {{ value != null ? formatter(value) : '' }}
         <small v-if="unit">{{ unit }}</small>
-    </span>
+      </span>
       <v-divider />
     </div>
     <div class="v-alert__border" :class="`text-${color}`" />
